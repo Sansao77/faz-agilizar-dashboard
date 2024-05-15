@@ -6,10 +6,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
 aside{
+    overflow-y: scroll;
     scrollbar-width: none;
+}
+
+aside::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
 
 summary.botao-menu::after {

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="shortcut icon" type="favicon.ico" href="../favicon.ico">
+    <title>Dashboard</title>
+    <script>
+        $(function(){
+            $("#add_menu").load("menu.html");
+            $("#add_user_tab").load("user_tab.html");
+        });
+    </script>
+</head>
+<body>
+    <main class="flex bg-[#E8EBF0]">
+        <div id="add_menu"></div>
+        <section class="flex flex-col min-w-fit w-full">
+            <div id="add_user_tab"></div>
+            <div class="self-center w-[98%] my-4 p-3 bg-white rounded-md shadow-md">
+                <p class="font-semibold mb-1.5">DASHBOARD</p>
+                <a class="flex flex-wrap items-center text-xs text-[#73439A] font-bold hover:cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-3 h-3 fill-transparent stroke-[#73439A]
+                    mr-1">
+                        <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />
+                    </svg>
+                    <p>Dashboard</p>
+                </a>
+            </div>
+
+            <section class="px-3">
+                <p class="text-sm mb-2">
+                    Receba push notificações de novos pedidos em seu dispositivo
+                </p>
+                <button type="button" class="flex flex-wrap text-center px-3.5 py-2 text-sm  text-white bg-[#1661AE] rounded-md">
+                    Ativar Notificações Navegador
+                </button>
+            </section>
+
+            <section class="my-3 px-5">
+                <section class="grid grid-flow-col gap-6">
+                    <div class="p-2 bg-white rounded-md shadow-md">
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <p class="font-bold text-xs">TOTAL DE VENDAS</p>
+                                <div class="flex px-1.5 py-0.5 items-center bg-[#0AC17426] rounded-2xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-3 h-3 stroke-[#20B9AE]">
+                                        <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 0 1 .919-.53l4.78 1.281a.75.75 0 0 1 .531.919l-1.281 4.78a.75.75 0 0 1-1.449-.387l.81-3.022a19.407 19.407 0 0 0-5.594 5.203.75.75 0 0 1-1.139.093L7 10.06l-4.72 4.72a.75.75 0 0 1-1.06-1.061l5.25-5.25a.75.75 0 0 1 1.06 0l3.074 3.073a20.923 20.923 0 0 1 5.545-4.931l-3.042-.815a.75.75 0 0 1-.53-.919Z" clip-rule="evenodd" />
+                                    </svg>                                      
+                                    <p class="ml-1 text-sm text-[#20B9AE]">10.0%</p>
+                                </div>
+                            </div>
+                            <p class="text-3xl font-bold">3856</p>
+                        </div>
+                        <form action="" method="get">
+                            <select name="periodo" title="periodo" id="periodo-total">
+                                <option value="mes">Este més</option>
+                                <option value="semestre">Este semestre</option>
+                                <option value="ano">Este ano</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="p-2 bg-white rounded-md shadow-md">
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <p class="font-bold text-xs">VENDAS ONLINE</p>
+                                <div class="flex px-1.5 py-0.5 items-center bg-[#0AC17426] rounded-2xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-3 h-3 stroke-[#20B9AE]">
+                                        <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 0 1 .919-.53l4.78 1.281a.75.75 0 0 1 .531.919l-1.281 4.78a.75.75 0 0 1-1.449-.387l.81-3.022a19.407 19.407 0 0 0-5.594 5.203.75.75 0 0 1-1.139.093L7 10.06l-4.72 4.72a.75.75 0 0 1-1.06-1.061l5.25-5.25a.75.75 0 0 1 1.06 0l3.074 3.073a20.923 20.923 0 0 1 5.545-4.931l-3.042-.815a.75.75 0 0 1-.53-.919Z" clip-rule="evenodd" />
+                                    </svg>                                      
+                                    <p class="ml-1 text-sm text-[#20B9AE]">30.0%</p>
+                                </div>
+                            </div>
+                            <p class="text-3xl font-bold">1052</p>
+                        </div>
+                        <form action="" method="get">
+                            <select name="periodo" title="periodo" id="periodo-online">
+                                <option value="mes">Este més</option>
+                                <option value="semestre">Este semestre</option>
+                                <option value="ano">Este ano</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="p-2 bg-white rounded-md shadow-md">
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <p class="font-bold text-xs">VENDAS FEIRA</p>
+                                <div class="flex px-1.5 py-0.5 items-center bg-[#0AC17426] rounded-2xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-3 h-3 stroke-[#20B9AE]">
+                                        <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 0 1 .919-.53l4.78 1.281a.75.75 0 0 1 .531.919l-1.281 4.78a.75.75 0 0 1-1.449-.387l.81-3.022a19.407 19.407 0 0 0-5.594 5.203.75.75 0 0 1-1.139.093L7 10.06l-4.72 4.72a.75.75 0 0 1-1.06-1.061l5.25-5.25a.75.75 0 0 1 1.06 0l3.074 3.073a20.923 20.923 0 0 1 5.545-4.931l-3.042-.815a.75.75 0 0 1-.53-.919Z" clip-rule="evenodd" />
+                                    </svg>                                      
+                                    <p class="ml-1 text-sm text-[#20B9AE]">5.0%</p>
+                                </div>
+                            </div>
+                            <p class="text-3xl font-bold">980</p>
+                        </div>
+                        <form action="" method="get">
+                            <select name="periodo" title="periodo" id="periodo-feira">
+                                <option value="mes">Este més</option>
+                                <option value="semestre">Este semestre</option>
+                                <option value="ano">Este ano</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="p-2 bg-white rounded-md shadow-md">
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <p class="font-bold text-xs">VENDAS LOJA 1</p>
+                                <div class="flex px-1.5 py-0.5 items-center bg-[#F47A362B] rounded-2xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-3 h-3 stroke-[#F44236]">
+                                        <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 0 1 .919-.53l4.78 1.281a.75.75 0 0 1 .531.919l-1.281 4.78a.75.75 0 0 1-1.449-.387l.81-3.022a19.407 19.407 0 0 0-5.594 5.203.75.75 0 0 1-1.139.093L7 10.06l-4.72 4.72a.75.75 0 0 1-1.06-1.061l5.25-5.25a.75.75 0 0 1 1.06 0l3.074 3.073a20.923 20.923 0 0 1 5.545-4.931l-3.042-.815a.75.75 0 0 1-.53-.919Z" clip-rule="evenodd" />
+                                    </svg>                                      
+                                    <p class="ml-1 text-sm text-[#F44236]">-1.0%</p>
+                                </div>
+                            </div>
+                            <p class="text-3xl font-bold">750</p>
+                        </div>
+                        <form action="" method="get">
+                            <select name="periodo" title="periodo" id="periodo-loja-1">
+                                <option value="mes">Este més</option>
+                                <option value="semestre">Este semestre</option>
+                                <option value="ano">Este ano</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="p-2 bg-white rounded-md shadow-md">
+                        <div>
+                            <div class="flex justify-between mb-3">
+                                <p class="font-bold text-xs">VENDAS LOJA 2</p>
+                                <div class="flex px-1.5 py-0.5 items-center bg-[#0AC17426] rounded-2xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-3 h-3 stroke-[#20B9AE]">
+                                        <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 0 1 .919-.53l4.78 1.281a.75.75 0 0 1 .531.919l-1.281 4.78a.75.75 0 0 1-1.449-.387l.81-3.022a19.407 19.407 0 0 0-5.594 5.203.75.75 0 0 1-1.139.093L7 10.06l-4.72 4.72a.75.75 0 0 1-1.06-1.061l5.25-5.25a.75.75 0 0 1 1.06 0l3.074 3.073a20.923 20.923 0 0 1 5.545-4.931l-3.042-.815a.75.75 0 0 1-.53-.919Z" clip-rule="evenodd" />
+                                    </svg>                                      
+                                    <p class="ml-1 text-sm text-[#20B9AE]">5.0%</p>
+                                </div>
+                            </div>
+                            <p class="text-3xl font-bold">856</p>
+                        </div>
+                        <form action="" method="get">
+                            <select name="periodo" title="periodo" id="periodo-loja-2">
+                                <option value="mes">Este més</option>
+                                <option value="semestre">Este semestre</option>
+                                <option value="ano">Este ano</option>
+                            </select>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="my-3">
+                    <p class="text-xs font-bold mb-2.5">PRODUTOS MAIS VENDIDOS</p>
+                    <div class="flex px-1.5 py-4 bg-white items-center justify-between rounded-md shadow-lg">
+                        <div class="grid grid-flow-col gap-12">
+                            <div class="flex">
+                                <img src="../../../public/mais-vendidos/vestido-estampado.png" alt="vestido-estampado"
+                                class="size-16 ml-1 overflow-hidden rounded-lg shadow-md">
+                                <div class="ml-3.5 justify-center items-center mt-2.5 text-xs">
+                                    <div class="mb-1.5">
+                                        <p class="font-bold">VESTIDO ESTAMPADO</p>
+                                        <p class="text-[#949494]">Cód. 336983</p>
+                                    </div>
+                                    <a class="cursor-pointer text-[#949494]">Ver Produto</a>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <img src="../../../public/mais-vendidos/calca-jeans.png" alt="vestido-estampado"
+                                class="size-16 ml-1 overflow-hidden rounded-lg shadow-md">
+                                <div class="ml-3.5 justify-center items-center mt-2.5 text-xs">
+                                    <div class="mb-1.5">
+                                        <p class="font-bold">CALÇA JEANS</p>
+                                        <p class="text-[#949494]">Cód. 336983</p>
+                                    </div>
+                                    <a class="cursor-pointer text-[#949494]">Ver Produto</a>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <img src="../../../public/mais-vendidos/cropped.png" alt="vestido-estampado"
+                                class="size-16 ml-1 overflow-hidden rounded-lg shadow-md">
+                                <div class="ml-3.5 justify-center items-center mt-2.5 text-xs">
+                                    <div class="mb-1.5">
+                                        <p class="font-bold">CROPPED CORES</p>
+                                        <p class="text-[#949494]">Cód. 336983</p>
+                                    </div>
+                                    <a class="cursor-pointer text-[#949494]">Ver Produto</a>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <img src="../../../public/mais-vendidos/conjunto.png" alt="vestido-estampado"
+                                class="size-16 ml-1 overflow-hidden rounded-lg shadow-md">
+                                <div class="ml-3.5 justify-center items-center mt-2.5 text-xs">
+                                    <div class="mb-1.5">
+                                        <p class="font-bold">CONJUNTO VERÃO</p>
+                                        <p class="text-[#949494]">Cód. 336983</p>
+                                    </div>
+                                    <a class="cursor-pointer text-[#949494]">Ver Produto</a>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <img src="../../../public/mais-vendidos/blusa-manga.png" alt="vestido-estampado"
+                                class="size-16 ml-1 overflow-hidden rounded-lg shadow-md">
+                                <div class="ml-3.5 justify-center items-center mt-2.5 text-xs">
+                                    <div class="mb-1.5">
+                                        <p class="font-bold">BLUSA MANGA</p>
+                                        <p class="text-[#949494]">Cód. 336983</p>
+                                    </div>
+                                    <a class="cursor-pointer text-[#949494]">Ver Produto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" title="side-button" class="mr-1 h-16 rounded-md shadow-md shadow-[#949494]
+                        active:shadow-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                            class="size-9 stroke-[#949494]">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </button>
+                    </div>
+                </section>
+
+                <section class="my-3">
+                    <p class="text-xs font-bold mb-2.5">TOP CLIENTES</p>
+                    <div class="flex px-1.5 py-4 bg-white items-center justify-between rounded-md shadow-lg">
+                        <div class="grid grid-flow-col gap-16">
+                            <div class="flex items-center">
+                                <img src="../../../public/top-clientes/carmem.png" alt="cliente-carmem"
+                                class="size-16 mr-2.5">
+                                <div class="text-[#949494] text-xs">
+                                    <p class="text-[#373A3C] text-sm font-bold">CARMEM MOURA</p>
+                                    <p>Cliente Loja 1</p>
+                                    <p>Pedidos: 570</p>
+                                    <a class="cursor-pointer mt-1">Ver Cadastro</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <img src="../../../public/top-clientes/ana.png" alt="cliente-carmem"
+                                class="size-16 mr-2.5">
+                                <div class="text-[#949494] text-xs">
+                                    <p class="text-[#373A3C] text-sm font-bold">ANA MARIA</p>
+                                    <p>Cliente Online</p>
+                                    <p>Pedidos: 398</p>
+                                    <a class="cursor-pointer mt-1">Ver Cadastro</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <img src="../../../public/top-clientes/jose.png" alt="cliente-carmem"
+                                class="size-16 mr-2.5">
+                                <div class="text-[#949494] text-xs">
+                                    <p class="text-[#373A3C] text-sm font-bold">JOSÉ PAULO</p>
+                                    <p>Cliente Feira</p>
+                                    <p>Pedidos: 267</p>
+                                    <a class="cursor-pointer mt-1">Ver Cadastro</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <img src="../../../public/top-clientes/claudia.png" alt="cliente-carmem"
+                                class="size-16 mr-2.5">
+                                <div class="text-[#949494] text-xs">
+                                    <p class="text-[#373A3C] text-sm font-bold">CLAUDIA SILVA</p>
+                                    <p>Cliente Loja 2</p>
+                                    <p>Pedidos: 279</p>
+                                    <a class="cursor-pointer mt-1">Ver Cadastro</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <img src="../../../public/top-clientes/joao.png" alt="cliente-carmem"
+                                class="size-16 mr-2.5">
+                                <div class="text-[#949494] text-xs">
+                                    <p class="text-[#373A3C] text-sm font-bold">JOÃO VITOR</p>
+                                    <p>Cliente Loja 1</p>
+                                    <p>Pedidos: 183</p>
+                                    <a class="cursor-pointer mt-1">Ver Cadastro</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" title="side-button" class="mr-1 h-16 rounded-md shadow-md shadow-[#949494]
+                        active:shadow-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                            class="size-9 stroke-[#949494]">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </button>
+                    </div>
+                </section>
+
+                <section class="my-1.5 p-4">
+                    <p>VENDAS ATIVAS</p>
+                    <div class="flex p-4 justify-center">
+                        <div>
+                            <p>ULTIMOS PEDIDOS</p>
+                            <div></div>
+                        </div>
+                        <form>
+                            <p>VENDEDORES DESTACADOS</p>
+                            <div></div>
+                            <div></div>
+                        </form>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
