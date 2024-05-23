@@ -1,0 +1,163 @@
+{
+    "pagamento":[
+        {
+            "id": 1,
+            "imagem":"../public/formas/pagamento/dinheiro.png",
+            "nome":"Dinheiro"
+        },
+        {
+            "id": 2,
+            "imagem":"../public/formas/pagamento/pix.png",
+            "nome":"Pix"
+        },
+        {
+            "id": 3,
+            "imagem":"../public/formas/pagamento/transferencia.png",
+            "nome":"Transferência"
+        },
+        {
+            "id": 4,
+            "imagem":"../public/formas/pagamento/boleto.png",
+            "nome":"Boleto"
+        },
+        {
+            "id": 5,
+            "imagem":"../public/formas/pagamento/cheque.png",
+            "nome":"Cheque"
+        },
+        {
+            "id": 6,
+            "imagem":"../public/formas/pagamento/deposito.png",
+            "nome":"Depósito"
+        },
+        {
+            "id": 7,
+            "imagem":"../public/formas/pagamento/debito.png",
+            "nome":"Débito"
+        },
+        {
+            "id": 8,
+            "imagem":"../public/formas/pagamento/credito.png",
+            "nome":"Crédito"
+        },
+        {
+            "id": 9,
+            "imagem":"../public/formas/pagamento/fiado.png",
+            "nome":"Fiado"
+        },
+        {
+            "id": 10,
+            "imagem":"../public/formas/pagamento/picpay.png",
+            "nome":"PicPay"
+        },
+        {
+            "id": 11,
+            "imagem":"../public/formas/pagamento/mercado_pago.png",
+            "nome":"Mercado Pago"
+        },
+        {
+            "id": 12,
+            "imagem":"../public/formas/pagamento/pagseguro.png",
+            "nome":"PagSeguro"
+        }
+    ],
+    "envio":[
+        {
+            "id": 1,
+            "imagem":"../public/formas/envio/retirada.png",
+            "nome":"Retirada na Loja"
+        },
+        {
+            "id": 2,
+            "imagem":"../public/formas/envio/correios.png",
+            "nome":"Correios (PAC)"
+        },
+        {
+            "id": 3,
+            "imagem":"../public/formas/envio/sedex.png",
+            "nome":"Sedex"
+        },
+        {
+            "id": 4,
+            "imagem":"../public/formas/envio/excursao.png",
+            "nome":"Excursão"
+        },
+        {
+            "id": 5,
+            "imagem":"../public/formas/envio/moto_taxi.png",
+            "nome":"MotoTáxi"
+        },
+        {
+            "id": 6,
+            "imagem":"../public/formas/envio/uber.png",
+            "nome":"Uber"
+        },
+        {
+            "id": 7,
+            "imagem":"../public/formas/envio/aereo.png",
+            "nome":"Aéreo"
+        },
+        {
+            "id": 8,
+            "imagem":"../public/formas/envio/transportadora.png",
+            "nome":"Transportadora"
+        },
+        {
+            "id": 9,
+            "imagem":"../public/formas/envio/jadlog.png",
+            "nome":"JadLog"
+        },
+        {
+            "id": 10,
+            "imagem":"../public/formas/envio/braspress.png",
+            "nome":"Braspress"
+        },
+        {
+            "id": 11,
+            "imagem":"../public/formas/envio/jamef.png",
+            "nome":"Jamef"
+        },
+        {
+            "id": 12,
+            "imagem":"../public/formas/envio/mandacaru.png",
+            "nome":"Mandacaru"
+        }
+    ],
+    "integrações":[
+        {
+            "id": 1,
+            "imagem":"../public/formas/integracoes/whatsapp.png",
+            "nome":"Whatsapp"
+        },
+        {
+            "id": 2,
+            "imagem":"../public/formas/integracoes/instagram.png",
+            "nome":"Sacolinha do Instagram"
+        },
+        {
+            "id": 3,
+            "imagem":"../public/formas/integracoes/facebook_pixel.png",
+            "nome":"FACEBOOK PIXEL"
+        },
+        {
+            "id": 4,
+            "imagem":"../public/formas/integracoes/boleto.png",
+            "nome":"Boleto"
+        },
+        {
+            "id": 5,
+            "imagem":"../public/formas/integracoes/google_analytics.png",
+            "nome":"Google Analytics"
+        },
+        {
+            "id": 6,
+            "imagem":"../public/formas/integracoes/google_tag_manager.png",
+            "nome":"Google Tag Manager"
+        },
+        {
+            "id": 7,
+            "imagem":"../public/formas/integracoes/debito",
+            "nome":"Débito"
+        }
+    ]
+}

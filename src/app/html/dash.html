@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <link rel="shortcut icon" type="favicon.ico" href="../favicon.ico">
     <title>Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="favicon.ico" href="../favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         $(function(){
             $("#add_menu").load("menu.html");
             $("#add_user_tab").load("user_tab.html");
         });
     </script>
+    <script src="../js/graphs/graph_column.js" type="module"></script>
+    <script src="../js/graphs/graph_donut.js" type="module"></script>
+    <script type="module" src="../js/formas.js"></script>
 </head>
 <body>
     <main class="flex bg-[#E8EBF0]">
@@ -55,7 +59,7 @@
                         </div>
                         <form action="" method="get">
                             <select name="periodo" title="periodo" id="periodo-total">
-                                <option value="mes">Este més</option>
+                                <option value="mes">Este mês</option>
                                 <option value="semestre">Este semestre</option>
                                 <option value="ano">Este ano</option>
                             </select>
@@ -77,7 +81,7 @@
                         </div>
                         <form action="" method="get">
                             <select name="periodo" title="periodo" id="periodo-online">
-                                <option value="mes">Este més</option>
+                                <option value="mes">Este mês</option>
                                 <option value="semestre">Este semestre</option>
                                 <option value="ano">Este ano</option>
                             </select>
@@ -99,7 +103,7 @@
                         </div>
                         <form action="" method="get">
                             <select name="periodo" title="periodo" id="periodo-feira">
-                                <option value="mes">Este més</option>
+                                <option value="mes">Este mês</option>
                                 <option value="semestre">Este semestre</option>
                                 <option value="ano">Este ano</option>
                             </select>
@@ -121,7 +125,7 @@
                         </div>
                         <form action="" method="get">
                             <select name="periodo" title="periodo" id="periodo-loja-1">
-                                <option value="mes">Este més</option>
+                                <option value="mes">Este mês</option>
                                 <option value="semestre">Este semestre</option>
                                 <option value="ano">Este ano</option>
                             </select>
@@ -143,7 +147,7 @@
                         </div>
                         <form action="" method="get">
                             <select name="periodo" title="periodo" id="periodo-loja-2">
-                                <option value="mes">Este més</option>
+                                <option value="mes">Este mês</option>
                                 <option value="semestre">Este semestre</option>
                                 <option value="ano">Este ano</option>
                             </select>
@@ -294,22 +298,229 @@
                     </div>
                 </section>
 
-                <section class="my-1.5 p-4">
-                    <p>VENDAS ATIVAS</p>
-                    <div class="flex p-4 justify-center">
-                        <div>
-                            <p>ULTIMOS PEDIDOS</p>
-                            <div></div>
+                <section class="my-2.5">
+                    <p class="text-xs font-bold mb-2.5">VENDAS ATIVAS</p>
+                    <div class="flex justify-between">
+                        <div class="bg-white p-3 rounded-md shadow-md w-4/6">
+                            <p class="font-bold text-xs mb-2.5">ULTIMOS PEDIDOS</p>
+                            <div class="grid grid-cols-7 gap-x-5 content-evenly text-sm
+                            [&>div]:grid [&>div]:grid-rows-7 [&>div]:gap-y-2
+                            [&>div]:justify-items-center [&>div]:content-evenly">
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">Data</h3>
+                                    <p>30/12/23</p>
+                                    <p>30/12/23</p>
+                                    <p>30/12/23</p>
+                                    <p>30/12/23</p>
+                                    <p>30/12/23</p>
+                                    <p>30/12/23</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">LOJA</h3>
+                                    <p>FEIRA</p>
+                                    <p>ONLINE</p>
+                                    <p>LOJA 1</p>
+                                    <p>FEIRA</p>
+                                    <p>LOJA 2</p>
+                                    <p>LOJA 2</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">VENDEDOR</h3>
+                                    <p>MARIA</p>
+                                    <p>JOSÉ</p>
+                                    <p>ANA</p>
+                                    <p>MARIA</p>
+                                    <p>PAULO</p>
+                                    <p>ANDREA</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">CÓDIGO</h3>
+                                    <p>698FD53S85</p>
+                                    <p>698FD53S85</p>
+                                    <p>698FD53S85</p>
+                                    <p>698FD53S85</p>
+                                    <p>698FD53S85</p>
+                                    <p>698FD53S85</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">DESCRIÇÃO</h3>
+                                    <p>CALÇA JEANS</p>
+                                    <p>CROPPED</p>
+                                    <p>VESTIDO EST.</p>
+                                    <p>BLUSA</p>
+                                    <p>SAIA</p>
+                                    <p>VESTIDO</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">QTD.</h3>
+                                    <p>50 PÇ</p>
+                                    <p>100 PÇ</p>
+                                    <p>25 PÇ</p>
+                                    <p>80 PÇ</p>
+                                    <p>32 PÇ</p>
+                                    <p>10 PÇ</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">VALOR</h3>
+                                    <p>R$ 3.200,00</p>
+                                    <p>R$ 8.200,00</p>
+                                    <p>R$ 1.200,00</p>
+                                    <p>R$ 4.200,00</p>
+                                    <p>R$ 2.200,00</p>
+                                    <p>R$ 900,00</p>
+                                </div>
+                            </div>
                         </div>
-                        <form>
-                            <p>VENDEDORES DESTACADOS</p>
-                            <div></div>
-                            <div></div>
+                        <form action="" method="get" class="flex flex-col bg-white p-3 rounded-md shadow-md ">
+                            <p class="self-center mb-2 text-sm font-semibold">VENDEDORES DESTACADOS</p>
+                            <div class="mb-5 self-center [&_*]:text-sm">
+                                <label for="mes-i-1">DE</label>
+                                <select name="mes-inicial" id="mes-i-1">
+                                    <option value="mes-1">JAN</option>
+                                </select>
+
+                                <label for="mes-f-1">ATÉ</label>
+                                <select name="mes-final" id="mes-f-1">
+                                    <option value="mes-12">DEZ</option>
+                                </select>
+
+                                <label for="ano-v-1">ANO</label>
+                                <select name="ano-vendas" id="ano-v-1">
+                                    <option value="ano-2023">2023</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-3 gap-x-3 content-evenly text-sm
+                            [&>div]:grid [&>div]:grid-rows-6 [&>div]:gap-y-2
+                            [&>div]:justify-items-center [&>div]:content-evenly">
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">LOJA</h3>
+                                    <p>FEIRA</p>
+                                    <p>ONLINE</p>
+                                    <p>LOJA 1</p>
+                                    <p>FEIRA</p>
+                                    <p>LOJA 2</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">VENDEDOR</h3>
+                                    <p>MARIA</p>
+                                    <p>JOSÉ</p>
+                                    <p>ANA</p>
+                                    <p>ANDREA</p>
+                                    <p>PAULO</p>
+                                </div>
+                                <div class="[&>:not(h3)]:text-[#949494] [&>:not(h3)]:text-xs">
+                                    <h3 class="font-bold">TOTAL VENDAS</h3>
+                                    <p>R$ 35.200,00</p>
+                                    <p>R$ 12.000,00</p>
+                                    <p>R$ 11.200,00</p>
+                                    <p>R$ 9.700,00</p>
+                                    <p>R$ 8.900,00</p>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </section>
+
+                <section class="py-2 max-w-full overflow-auto">
+                    <p class="text-xs font-bold mb-2.5">ESTATÍSTICAS</p>
+                    <div class="flex">
+                        <div class="mr-5 p-3 w-4/6 bg-white rounded-md shadow-md">
+                            <p class="text-xs font-semibold">GRÁFICO DE FATURAMENTO</p>
+                            <div class="grid grid-cols-2 divide-x-2 pr-3">
+                                <!--Aqui vão ficar os gráficos-->
+                                <div id="column-chart"></div>
+                                <div class="flex max-w-80">
+                                    <div class="flex flex-col mx-3 pb-3 items-center self-end">
+                                        <div class="flex flex-col [&>div]:flex mb-2">
+                                            <div class="text-center text-nowrap">
+                                                <div class="mr-1.5 w-8 h-3 bg-[#20B9AE]">&nbsp;</div>
+                                                <p class="text-xs font-extrabold">LOJA FÍSICA</p>
+                                            </div>
+                                            <div class="text-center text-nowrap">
+                                                <p class="mr-3.5 text-xs font-bold">35%</p>
+                                                <p class="text-xs text-[#949494]">R$ 297.500,00</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col [&>div]:flex">
+                                            <div class="text-center text-nowrap">
+                                                <div class="mr-1.5 w-8 h-3 bg-[#3E70C9]">&nbsp;</div>
+                                                <p class="text-xs font-extrabold">LOJA ONLINE</p>
+                                            </div>
+                                            <div class="text-center text-nowrap">
+                                                <p class="mr-3.5 text-xs font-bold">65%</p>
+                                                <p class="text-xs text-[#949494]">R$ 552.500,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div id="donut-chart"></div>
+                                        <p class="mt-6 ml-14 text-[#949494] text-xl">R$ 850.000,00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="flex flex-col p-3 bg-white rounded-md shadow-md">
+                            <p class="self-center mb-2 text-sm font-semibold">FATURAMENTO PERÍODO</p>
+                            <div class="mb-5 self-center [&_*]:text-sm">
+                                <label for="mes-i-2">DE</label>
+                                <select name="mes-inicial" id="mes-i-2">
+                                    <option value="mes-1">JAN</option>
+                                </select>
+
+                                <label for="mes-f-2">ATÉ</label>
+                                <select name="mes-final" id="mes-f-2">
+                                    <option value="mes-12">DEZ</option>
+                                </select>
+
+                                <label for="ano-v-2">ANO</label>
+                                <select name="ano-vendas" id="ano-v-2">
+                                    <option value="ano-2023">2023</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-flow-row [&>div]:my-1">
+                                <div class="flex">
+                                    <div class="bg-[#3E70C9] w-1.5 h-full mx-2">&nbsp;</div>
+                                    <div class="flex flex-col text-sm" id="data-loja-1">
+                                        <p class="font-bold">LOJA ONLINE</p>
+                                        <p class="text-[#949494]">R$ 397.500,00</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="bg-[#20B9AE] w-1.5 h-full mx-2">&nbsp;</div>
+                                    <div class="flex flex-col text-sm" id="data-loja-2">
+                                        <p class="font-bold">FEIRA</p>
+                                        <p class="text-[#949494]">R$ 358.500,00</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="bg-[#20B9AE] w-1.5 h-full mx-2">&nbsp;</div>
+                                    <div class="flex flex-col text-sm" id="data-loja-3">
+                                        <p class="font-bold">LOJA FÍSICA 1</p>
+                                        <p class="text-[#949494]">R$ 180.000,00</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="bg-[#20B9AE] w-1.5 h-full mx-2">&nbsp;</div>
+                                    <div class="flex flex-col text-sm" id="data-loja-4">
+                                        <p class="font-bold">LOJA FÍSICA 2</p>
+                                        <p class="text-[#949494]">R$ 264.500,00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section id="formas-pagamento" class="grid grid-cols-4"></section>
+                <section id="formas-envio"></section>
+                <section id="formas-integracoes"></section>
             </section>
         </section>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </body>
 </html>
