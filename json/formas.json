@@ -123,10 +123,10 @@
             "nome":"Mandacaru"
         }
     ],
-    "integrações":[
+    "integracoes":[
         {
             "id": 1,
-            "imagem":"../public/formas/integracoes/whatsapp.png",
+            "imagem":"../public/formas/integracoes/whatsapp.png",    
             "nome":"Whatsapp"
         },
         {
@@ -156,7 +156,7 @@
         },
         {
             "id": 7,
-            "imagem":"../public/formas/integracoes/debito",
+            "imagem":"../public/formas/integracoes/debito.png",
             "nome":"Débito"
         }
     ]
