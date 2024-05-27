@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de envio</title>
+    <script src="../../js/formas.js" type="module"></script>
+    <link rel="shortcut icon" type="favicon.ico" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../../output.css">
+</head>
+<body>
+    <header class="flex justify-end px-4 py-3 bg-black">
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 stroke-white fill-white">
+                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+            </svg>
+        </a>          
+    </header>
+    <main class="flex flex-col items-center mt-3">
+        <p class="text-3xl font-bold mb-2">Formas de Envio:</p>
+        <div id="formas-envio" class="grid grid-cols-4 gap-x-3 gap-y-1 p-5 w-full 
+        [&>div]:!shadow-xl"></div>
+    </main>
+    <footer class="flex [&>button]:flex bg-[#F5F5F5] border-[#E5E5E5] border-2 p-2.5 justify-end">
+        <button type="button" class="bg-[#F44236] [&>*]:p-2 mr-4">
+            <div class="bg-[#0000001A]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 fill-white">
+                    <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                </svg>
+            </div>
+            <p class="text-white self-center">Cancelar</p>
+        </button>
+
+        <button type="button" class="bg-[#43B968] [&>*]:p-2">
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 stroke-white fill-transparent">
+                    <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                </svg>                                    
+            </div>
+            <p class="text-white self-center">Salvar</p>
+        </button>
+    </footer>
+</body>
+</html>
