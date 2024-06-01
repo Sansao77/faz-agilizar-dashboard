@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Produtos - SKU/Cód</title>
+    <link rel="shortcut icon" type="favicon.ico" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../../output.css">
+</head>
+<body>
+    <header class="flex justify-between px-4 py-3 bg-[#373A3C]">
+        <p class="text-xl text-white font-bold">SKU/CÓDIGO DE BARRAS</p>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 stroke-white fill-white">
+                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+            </svg>
+        </a>
+    </header>
+    <form action="" method="post">
+        <main class="px-4 py-1">
+            <div class="flex flex-col text-center my-2">
+                <label for="tipo-cod-bar" class="text-3xl">Tipo de Código de Barra</label>
+                <select name="tipo-cod-bar" id="tipo-cod-bar" class="text-4xl text-center 
+                border-[#D9D9D9] [&>option]:text-2xl">
+                    <option value="EAN-13">EAN-13</option>
+                </select>
+            </div>
+            <fieldset class="my-1 [&>div]:justify-center">
+                <div>
+                    <input type="radio" id="gerar-cod-bar" value="gerar-codigo" name="codigo" checked>
+                    <label for="gerar-cod-bar">Gerar Código de Barras</label>
+                </div>
+                <div>
+                    <input type="radio" id="inserir-cod-bar" value="inserir-codigo" name="codigo">
+                    <label for="inserir-cod-bar">Inserir Código de Barras Existente</label>
+                </div>
+            </fieldset>
+            <div class="flex flex-col text-center my-2">
+                <label for="cod-bar" class="text-3xl">Código de Barra</label>
+                <div class="flex justify-between p-2">
+                    <input type="text" id="cod-bar" value="15568877456" class="text-4xl text-center w-full" disabled>
+                    <button type="button" id="copia-codigo" title="copia"
+                    class="pt-3.5 bg-transparent border-none absolute right-12 active:stroke-blue-600">
+                        <svg viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg"
+                        class="size-6 fill-transparent">
+                            <path d="M13.2522 18.0859H5.58859C4.8264 18.0859 4.09542 17.7831 3.55647 17.2442C3.01751 16.7052 2.71473 15.9743 2.71473 15.2121V5.63254C2.71473 5.37847 2.61381 5.13481 2.43416 4.95516C2.2545 4.77551 2.01085 4.67458 1.75678 4.67458C1.50272 4.67458 1.25906 4.77551 1.07941 4.95516C0.899755 5.13481 0.798828 5.37847 0.798828 5.63254V15.2121C0.798828 16.4824 1.30346 17.7007 2.20172 18.5989C3.09997 19.4972 4.31827 20.0018 5.58859 20.0018H13.2522C13.5063 20.0018 13.7499 19.9009 13.9296 19.7213C14.1092 19.5416 14.2102 19.2979 14.2102 19.0439C14.2102 18.7898 14.1092 18.5462 13.9296 18.3665C13.7499 18.1869 13.5063 18.0859 13.2522 18.0859ZM18.042 7.49097C18.032 7.40296 18.0127 7.31627 17.9845 7.23232V7.1461C17.9384 7.04761 17.877 6.95707 17.8025 6.87788L12.0548 1.13016C11.9756 1.05565 11.885 0.994208 11.7865 0.948148H11.7003L11.3938 0.842773H7.5045C6.7423 0.842773 6.01133 1.14555 5.47237 1.68451C4.93342 2.22346 4.63064 2.95444 4.63064 3.71663V13.2962C4.63064 14.0584 4.93342 14.7893 5.47237 15.3283C6.01133 15.8672 6.7423 16.17 7.5045 16.17H15.1681C15.9303 16.17 16.6613 15.8672 17.2002 15.3283C17.7392 14.7893 18.042 14.0584 18.042 13.2962V7.54844C18.042 7.54844 18.042 7.54844 18.042 7.49097ZM12.2943 4.10939L14.7754 6.59049H13.2522C12.9982 6.59049 12.7545 6.48956 12.5748 6.30991C12.3952 6.13026 12.2943 5.8866 12.2943 5.63254V4.10939ZM16.1261 13.2962C16.1261 13.5502 16.0251 13.7939 15.8455 13.9735C15.6658 14.1532 15.4222 14.2541 15.1681 14.2541H7.5045C7.25043 14.2541 7.00677 14.1532 6.82712 13.9735C6.64747 13.7939 6.54655 13.5502 6.54655 13.2962V3.71663C6.54655 3.46257 6.64747 3.21891 6.82712 3.03926C7.00677 2.85961 7.25043 2.75868 7.5045 2.75868H10.3784V5.63254C10.3784 6.39473 10.6811 7.12571 11.2201 7.66466C11.759 8.20362 12.49 8.5064 13.2522 8.5064H16.1261V13.2962Z" fill="#AEAEAE"/>
+                        </svg>    
+                    </button>
+                </div>
+            </div>
+            <div class="flex justify-center w-full">
+                <img src="/public/codigo_exemplo.jpg" alt="codigo_exemplo"
+                class="w-1/6">
+            </div>
+
+            <fieldset class="my-2 [&>div]:justify-center">
+                <div>
+                    <input type="radio" id="gerar-sku-auto" value="gerar-sku-auto" name="sku" checked>
+                    <label for="gerar-sku-auto">Gerar SKU Automaticamente</label>
+                </div>
+                <div>
+                    <input type="radio" id="gerar-sku-manual" value="gerar-sku-manual" name="sku">
+                    <label for="gerar-sku-manual">Gerar SKU Manualmente</label>
+                </div>
+                <div>
+                    <input type="radio" id="gerar-sku-apartir" value="gerar-sku-apartir" name="sku">
+                    <label for="gerar-sku-apartir">Gerar SKU Apartir do Código de Barras</label>
+                </div>
+            </fieldset>
+
+            <div class="flex flex-col text-center my-2">
+                <div class="flex justify-between p-2">
+                    <input type="text" title="sku" id="cod-sku" value="65GH82EW35" 
+                    class="text-4xl text-center w-full" disabled>
+                    <button type="button" id="copia-sku" title="copia"
+                    class="pt-3.5 bg-transparent border-none absolute right-12 active:stroke-blue-600">
+                        <svg viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg"
+                        class="size-6 fill-transparent">
+                            <path d="M13.2522 18.0859H5.58859C4.8264 18.0859 4.09542 17.7831 3.55647 17.2442C3.01751 16.7052 2.71473 15.9743 2.71473 15.2121V5.63254C2.71473 5.37847 2.61381 5.13481 2.43416 4.95516C2.2545 4.77551 2.01085 4.67458 1.75678 4.67458C1.50272 4.67458 1.25906 4.77551 1.07941 4.95516C0.899755 5.13481 0.798828 5.37847 0.798828 5.63254V15.2121C0.798828 16.4824 1.30346 17.7007 2.20172 18.5989C3.09997 19.4972 4.31827 20.0018 5.58859 20.0018H13.2522C13.5063 20.0018 13.7499 19.9009 13.9296 19.7213C14.1092 19.5416 14.2102 19.2979 14.2102 19.0439C14.2102 18.7898 14.1092 18.5462 13.9296 18.3665C13.7499 18.1869 13.5063 18.0859 13.2522 18.0859ZM18.042 7.49097C18.032 7.40296 18.0127 7.31627 17.9845 7.23232V7.1461C17.9384 7.04761 17.877 6.95707 17.8025 6.87788L12.0548 1.13016C11.9756 1.05565 11.885 0.994208 11.7865 0.948148H11.7003L11.3938 0.842773H7.5045C6.7423 0.842773 6.01133 1.14555 5.47237 1.68451C4.93342 2.22346 4.63064 2.95444 4.63064 3.71663V13.2962C4.63064 14.0584 4.93342 14.7893 5.47237 15.3283C6.01133 15.8672 6.7423 16.17 7.5045 16.17H15.1681C15.9303 16.17 16.6613 15.8672 17.2002 15.3283C17.7392 14.7893 18.042 14.0584 18.042 13.2962V7.54844C18.042 7.54844 18.042 7.54844 18.042 7.49097ZM12.2943 4.10939L14.7754 6.59049H13.2522C12.9982 6.59049 12.7545 6.48956 12.5748 6.30991C12.3952 6.13026 12.2943 5.8866 12.2943 5.63254V4.10939ZM16.1261 13.2962C16.1261 13.5502 16.0251 13.7939 15.8455 13.9735C15.6658 14.1532 15.4222 14.2541 15.1681 14.2541H7.5045C7.25043 14.2541 7.00677 14.1532 6.82712 13.9735C6.64747 13.7939 6.54655 13.5502 6.54655 13.2962V3.71663C6.54655 3.46257 6.64747 3.21891 6.82712 3.03926C7.00677 2.85961 7.25043 2.75868 7.5045 2.75868H10.3784V5.63254C10.3784 6.39473 10.6811 7.12571 11.2201 7.66466C11.759 8.20362 12.49 8.5064 13.2522 8.5064H16.1261V13.2962Z" fill="#AEAEAE"/>
+                        </svg>    
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="flex absolute bottom-0 [&>button]:flex bg-[#F5F5F5] border-[#E5E5E5] border-2 w-full p-2.5 justify-end">
+            <button type="submit" class="bg-[#F44236] [&>*]:p-2 mr-4">
+                <div class="bg-[#0000001A]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 fill-white">
+                        <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                    </svg>
+                </div>
+                <p class="text-white self-center">Cancelar</p>
+            </button>
+    
+            <button type="submit" href="" class="bg-[#43B968] [&>*]:p-2">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 stroke-white fill-transparent">
+                        <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                    </svg>                                    
+                </div>
+                <p class="text-white self-center">Salvar</p>
+            </button>
+        </footer>
+    </form>
+</body>
+</html>

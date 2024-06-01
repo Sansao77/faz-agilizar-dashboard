@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Produtos - Novo Produto</title>
+    <link rel="shortcut icon" type="favicon.ico" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../../output.css">
+</head>
+<body>
+    <header class="flex justify-between px-4 py-3 bg-[#373A3C]">
+        <p class="text-xl text-white font-bold">PRODUTO</p>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 stroke-white fill-white">
+                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+            </svg>
+        </a>
+    </header>
+
+    <form action="" method="post" class="w-full h-full">
+        <main class="px-4 py-1">
+            <div class="flex py-0.5">
+                <div class="flex flex-col w-1/4 mr-3">
+                    <label for="ref" class="text-[#373A3C] font-bold">Referência [?]</label>
+                    <input id="ref" type="text" class="mt-1">
+                </div>
+                <div class="flex flex-col w-3/4">
+                    <label for="titulo" class="text-[#373A3C] font-bold">Título</label>
+                    <input id="titulo" type="text" class="mt-1">
+                </div>
+            </div>
+            <div class="flex py-0.5">
+                <div class="flex flex-col w-1/4 mr-3">
+                    <label for="categ" class="text-[#373A3C] font-bold">Categoria</label>
+                    <select name="categoria" id="categ" class="mt-1">
+                        <option value="0">-- SELECIONE --</option>
+                    </select>
+                </div>
+                <div class="flex flex-col w-3/4">
+                    <label for="descricao" class="text-[#373A3C] font-bold">Descrição</label>
+                    <input id="descricao" type="text" class="mt-1">
+                </div>
+            </div>
+            <div class="flex flex-col py-0.5">
+                <label for="link-v" class="text-[#373A3C] font-bold">Link do Vídeo: [?]</label>
+                <input id="link-v" type="text" class="mt-1">
+                <p class="text-[#373A3C] text-xs">Ex: https://www.youtube.com/watch?v=Q3WHfIPp37c</p>
+            </div>
+            <div class="flex flex-col py-0.5">
+                <label for="var" class="text-[#373A3C] font-bold">O produto tem Variação</label>
+                <select name="variacao" id="var" class="mt-1">
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select>
+            </div>
+            <div class="flex py-0.5">
+                <div class="flex flex-col w-1/3 mr-8">
+                    <label for="p-varejo" class="text-[#373A3C] font-bold">Preço Varejo</label>
+                    <input id="p-varejo" type="text" class="mt-1">
+                </div>
+                <div class="flex flex-col w-1/3 mr-8">
+                    <label for="p-atacado" class="text-[#373A3C] font-bold">Preço Atacado</label>
+                    <input id="p-atacado" type="text" class="mt-1">
+                </div>
+                <div class="flex flex-col w-1/3">
+                    <label for="p-custo" class="text-[#373A3C] font-bold">Preço Custo</label>
+                    <input id="p-custo" type="text" class="mt-1">
+                </div>
+            </div>
+            <div class="flex py-0.5">
+                <div class="flex flex-col w-1/2 mr-8">
+                    <label for="pcc-atacado" class="text-[#373A3C] font-bold">Preço Cartão de Credito Atacado: [?]</label>
+                    <input id="pcc-atacado" type="text" class="mt-1">
+                </div>
+                <div class="flex flex-col w-1/2">
+                    <label for="pcc-varejo" class="text-[#373A3C] font-bold">Preço Cartão de Credito Varejo: [?]</label>
+                    <input id="pcc-varejo" type="text" class="mt-1">
+                </div>
+            </div>
+            <div class="flex py-0.5">
+                <div class="flex flex-col w-1/4 mr-8">
+                    <label for="largura-cm" class="text-[#373A3C] font-bold">Largura CM: [?]</label>
+                    <input id="largura-cm" type="text" class="mt-1">
+                </div>
+                <div class="flex flex-col w-1/4 mr-8">
+                    <label for="altura-cm" class="text-[#373A3C] font-bold">Altura CM: [?]</label>
+                    <input id="altura-cm" type="text" class="mt-1">
+                </div>
+                <div class="flex flex-col w-1/4 mr-8">
+                    <label for="comprimento-cm" class="text-[#373A3C] font-bold">Comptrimento CM: [?]</label>
+                    <input id="comprimento-cm" type="text" class="mt-1">
+                </div>
+                <div class="flex flex-col w-1/4">
+                    <label for="peso-kg" class="text-[#373A3C] font-bold">Peso KG: [?]</label>
+                    <input id="peso-kg" type="text" class="mt-1">
+                </div>
+            </div>
+
+            <div class="flex py-3.5 [&>button]:flex">
+                <button type="button" class="bg-[#20B9AE] [&>*]:p-2 mr-4 shadow-md">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                        class="size-6 fill-transparent">
+                            <path d="M0 0.261719V11.7383H11.4766V0.261719H0ZM10.7148 10.9766H0.761719V9.45312H10.7148V10.9766ZM0.761719 8.66602V1.02344H10.7148V8.66602H0.761719ZM10.1055 7.26953L9.57227 7.82812L7.71875 6.02539L6.52539 7.29492L4.62109 3.94336L2.03125 7.72656L1.39648 7.29492L4.69727 2.49609L6.67773 6.02539L7.69336 4.93359L10.1055 7.26953Z" fill="white"/>
+                        </svg>    
+                    </div>
+                    <p class="text-white self-center">Adicionar ou Remover Imagens</p>
+                </button>
+
+                <button type="button" class="bg-[#3E70C9] [&>*]:p-2 mr-4 shadow-md">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                        class="size-6 fill-transparent">
+                            <path d="M0 0.261719V11.7383H11.4766V0.261719H0ZM10.7148 10.9766H0.761719V9.45312H10.7148V10.9766ZM0.761719 8.66602V1.02344H10.7148V8.66602H0.761719ZM10.1055 7.26953L9.57227 7.82812L7.71875 6.02539L6.52539 7.29492L4.62109 3.94336L2.03125 7.72656L1.39648 7.29492L4.69727 2.49609L6.67773 6.02539L7.69336 4.93359L10.1055 7.26953Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <p class="text-white self-center">SKU/Código de Barras</p>
+                </button>
+            </div>
+        </main>
+    
+        <footer class="flex absolute bottom-0 [&>button]:flex bg-[#F5F5F5] border-[#E5E5E5] border-2 w-full p-2.5 justify-end">
+            <button type="submit" class="bg-[#F44236] [&>*]:p-2 mr-4">
+                <div class="bg-[#0000001A]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-6 fill-white">
+                        <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                    </svg>
+                </div>
+                <p class="text-white self-center">Cancelar</p>
+            </button>
+    
+            <button type="submit" href="" class="bg-[#43B968] [&>*]:p-2">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 stroke-white fill-transparent">
+                        <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                    </svg>                                    
+                </div>
+                <p class="text-white self-center">Salvar</p>
+            </button>
+        </footer>
+    </form>
+</body>
+</html>

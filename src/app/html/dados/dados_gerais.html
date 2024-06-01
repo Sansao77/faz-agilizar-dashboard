@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <link rel="stylesheet" href="../../../output.css">
+    <link rel="shortcut icon" type="favicon.ico" href="/src/app/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#add_menu").load("../menu.html");
+            $("#add_user_tab").load("../user_tab.html");
+        });
+    </script>
+    <style>
+        .switch-input{
+            transition: all;
+            transition-duration: 250ms;
+        }
+
+        input:checked + .switch-input{
+            background-color: #43B968;
+        }
+
+        input:checked + .switch-input + .switch-button{
+            transform: translateX(2.6rem);
+        }
+    </style>
+</head>
+<body class="flex bg-[#E8EBF0]">
+    <div id="add_menu"></div>
+    <main class="flex flex-col min-w-fit w-full">
+        <div id="add_user_tab"></div>
+        <div class="self-center w-[98%] my-4 p-3 bg-white rounded-md shadow-md">
+            <p class="font-semibold mb-1.5">DASHBOARD | CONFIGURAÇÕES | SUPORTE2021</p>
+            <a class="flex flex-wrap items-center text-xs text-[#73439A] font-bold hover:cursor-pointer">
+                <svg viewBox="0 0 13 14" xmlns="http://www.w3.org/2000/svg"
+                class="w-3 h-3 fill-transparent stroke-[#73439A] mr-1">
+                    <path d="M10.5625 12.7583H8.25195V8.1626H4.44336V12.7583H2.13281V5.87744H1.37109V13.52H11.3242V5.87744H10.5625V12.7583ZM5.20508 12.7583V8.92432H7.49023V12.7583H5.20508ZM12.6953 5.47119L12.2383 6.08057L6.34766 1.76416L0.457031 6.08057L0 5.47119L6.34766 0.799316L12.6953 5.47119Z" fill="#73439A"/>
+                </svg>    
+                <p>Dashboard <span class="text-[#818A91]">/ Gestor de Empresas / suporte2021 / Configurações / Dados</span></p>
+            </a>
+        </div>
+
+        <section class="px-3">
+            <div class="flex 
+            [&>button]:w-1/3 [&>button]:text-start [&>button]:rounded-t-lg 
+            [&>button]:bg-[#E1E5EB] [&>button]:p-4 [&>button]:text-[#B8C4D5] [&>button]:font-semibold">
+                <button type="button" class="!bg-white !text-black">DADOS GERAIS</button>
+                <button type="button">ADICIONAIS</button>
+                <button type="button">OUTROS</button>
+            </div>
+            <form action="" method="post">
+                <div class="bg-white h-screen px-4 pt-3 pb-5 [&>div]:flex [&>div]:py-1.5 [&>div]:items-center flex-wrap">
+                    <div>
+                        <div class="flex flex-col w-1/2 mr-5">
+                            <label for="descricao" class="text-[#373A3C] font-bold">Descrição:</label>
+                            <input id="descricao" type="text" placeholder="suporte" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="titulo" class="text-[#373A3C] font-bold">Título</label>
+                            <input id="titulo" type="text" placeholder="ATACADO" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4">
+                            <p class="text-[#373A3C] font-bold">Link Separado Tipos de Venda: [?]</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="link-venda" type="checkbox" title="link-venda" class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="qt-minima-atacado" class="text-[#373A3C] font-bold">Quantidade mínima para atacado [?]</label>
+                            <input id="qt-minima-atacado" type="text" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="qt-minima-ref" class="text-[#373A3C] font-bold">Qtde mínima por referência: [?]</label>
+                            <input id="qt-minima-ref" type="text" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="qt-minima-dias" class="text-[#373A3C] font-bold">Qtde mínima de dias para entrega:</label>
+                            <input id="qt-minima-dias" type="text" placeholder="8" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4">
+                            <p class="text-[#373A3C] font-bold">Utiliza página de produto: [?]</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="utiliza-produto" type="checkbox" title="utiliza-produto" class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <p class="text-[#373A3C] font-bold">Vender com Estoque?</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="verder-estoque" type="checkbox" title="verder-estoque" class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="valor-minimo" class="text-[#373A3C] font-bold">Valor mínimo de venda:</label>
+                            <input id="valor-minimo" type="text" placeholder="200,00" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <p class="text-[#373A3C] font-bold">Mostra preço no cartão: [?]</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="mostrar-preco" type="checkbox" title="mostrar-preco" class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col w-1/4">
+                            <p class="text-[#373A3C] font-bold">Vender com gênero?</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="vender-genero" type="checkbox" title="vender-genero" class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <p class="text-[#373A3C] font-bold">Solicita Documento do cliente? [?]</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="solicitar-documento" type="checkbox" title="solicitar-documento" 
+                                class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <p class="text-[#373A3C] font-bold">Solicita cidade/estado do cliente?</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="solicitar-cidade" type="checkbox" title="solicitar-cidade" class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <p class="text-[#373A3C] font-bold">Solicita E-mail do cliente?</p>
+                            <label class="relative flex items-center cursor-pointer ml-2 mt-3">
+                                <input id="solicitar-email" type="checkbox" title="solicitar-email" class="peer sr-only" checked>
+                                <div class="switch-input flex px-1.5 w-20 h-7 rounded-full shadow-[#00000040] 
+                                shadow-inner bg-[#dc2626] justify-between items-center">
+                                    <span class="text-white font-medium">Sim</span>
+                                    <span class="text-white font-medium">Não</span>
+                                </div>
+                                <span class="switch-button absolute left-0 size-10 bg-[#ECEEEF] rounded-full shadow-xl
+                                transform transition-transform duration-250"></span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col w-1/4">
+                            <label for="email" class="text-[#373A3C] font-bold">E-mail:</label>
+                            <input id="email" type="text" class="mt-1 p-2">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="telefone" class="text-[#373A3C] font-bold">Telefone:</label>
+                            <input id="telefone" type="text" placeholder="(81) 3232-3232" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="celular" class="text-[#373A3C] font-bold">Celular: [?]</label>
+                            <input id="celular" type="text" placeholder="(81) 3232-3232" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4 mr-5">
+                            <label for="instagram" class="text-[#373A3C] font-bold">Instagram: [?]</label>
+                            <input id="instagram" type="text" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/4">
+                            <label for="facebook" class="text-[#373A3C] font-bold">Facebook: [?]</label>
+                            <input id="facebook" type="text" class="mt-1 p-2">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col w-1/2 mr-7">
+                            <label for="link-google-maps" class="text-[#373A3C] font-bold">Informe o link do Google Maps: [?]</label>
+                            <input id="link-google-maps" type="text" class="mt-1 p-2">
+                        </div>
+                        <div class="flex flex-col w-1/2">
+                            <label for="keywords" class="text-[#373A3C] font-bold">Keywords: [?]</label>
+                            <input id="keywords" type="text" class="mt-1 p-2">
+                        </div>
+                    </div>
+
+                    <!--Observações Varejo-->
+                    <div class="flex flex-col">
+                        <p class="text-[#373A3C] font-bold">Observações Varejo:</p>
+                        <div class="grid grid-flow-col divide-x-2 auto-cols-min
+                        divide-[#BCBCBC] p-2 [&_button]:self-center [&_button]:px-1">
+                            <div class="flex justify-evenly">
+                                <button type="button" title="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" 
+                                    class="size-4 fill-transparent stroke-black">
+                                        <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm4.75 6.75a.75.75 0 0 1 1.5 0v2.546l.943-1.048a.75.75 0 0 1 1.114 1.004l-2.25 2.5a.75.75 0 0 1-1.114 0l-2.25-2.5a.75.75 0 1 1 1.114-1.004l.943 1.048V8.75Z" clip-rule="evenodd" />
+                                    </svg>                                          
+                                </button>
+                                <button type="button" title="1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" 
+                                    class="size-4 fill-transparent stroke-black">
+                                        <path d="M3 3.5A1.5 1.5 0 0 1 4.5 2h6.879a1.5 1.5 0 0 1 1.06.44l4.122 4.12A1.5 1.5 0 0 1 17 7.622V16.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 3 16.5v-13Z" />
+                                    </svg>                                          
+                                </button>
+                                <button type="button" title="2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" 
+                                    class="size-4 fill-transparent stroke-black">
+                                        <path fill-rule="evenodd" d="M15.988 3.012A2.25 2.25 0 0 1 18 5.25v6.5A2.25 2.25 0 0 1 15.75 14H13.5v-3.379a3 3 0 0 0-.879-2.121l-3.12-3.121a3 3 0 0 0-1.402-.791 2.252 2.252 0 0 1 1.913-1.576A2.25 2.25 0 0 1 12.25 1h1.5a2.25 2.25 0 0 1 2.238 2.012ZM11.5 3.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v.25h-3v-.25Z" clip-rule="evenodd" />
+                                        <path d="M3.5 6A1.5 1.5 0 0 0 2 7.5v9A1.5 1.5 0 0 0 3.5 18h7a1.5 1.5 0 0 0 1.5-1.5v-5.879a1.5 1.5 0 0 0-.44-1.06L8.44 6.439A1.5 1.5 0 0 0 7.378 6H3.5Z" />
+                                    </svg>                                          
+                                </button>
+                                <button type="button" title="3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" 
+                                    class="size-4 fill-transparent stroke-black">
+                                        <path d="M8 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+                                        <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm5 5a3 3 0 1 0 1.524 5.585l1.196 1.195a.75.75 0 1 0 1.06-1.06l-1.195-1.196A3 3 0 0 0 9.5 7Z" clip-rule="evenodd" />
+                                    </svg>                                          
+                                </button>
+                                <button type="button" title="4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                                    class="size-4 fill-black">
+                                        <path fill-rule="evenodd" d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 0 0 3 3h.27l-.155 1.705A1.875 1.875 0 0 0 7.232 22.5h9.536a1.875 1.875 0 0 0 1.867-2.045l-.155-1.705h.27a3 3 0 0 0 3-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0 0 18 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM16.5 6.205v-2.83A.375.375 0 0 0 16.125 3h-8.25a.375.375 0 0 0-.375.375v2.83a49.353 49.353 0 0 1 9 0Zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 0 1-.374.409H7.232a.375.375 0 0 1-.374-.409l.526-5.784a.373.373 0 0 1 .333-.337 41.741 41.741 0 0 1 8.566 0Zm.967-3.97a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H18a.75.75 0 0 1-.75-.75V10.5ZM15 9.75a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V10.5a.75.75 0 0 0-.75-.75H15Z" clip-rule="evenodd" />
+                                    </svg>  
+                                </button>
+                            </div>
+
+                            <button type="button" title="text" class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" 
+                                class="size-4 fill-transparent stroke-black">
+                                    <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                                </svg>                                      
+                            </button>
+
+                            <button type="button" title="codigo-fonte" 
+                            class="flex w-28 justify-around items-center text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" 
+                                class="size-4 fill-transparent stroke-black">
+                                    <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25Zm4.03 6.28a.75.75 0 0 0-1.06-1.06L4.97 9.47a.75.75 0 0 0 0 1.06l2.25 2.25a.75.75 0 0 0 1.06-1.06L6.56 10l1.72-1.72Zm4.5-1.06a.75.75 0 1 0-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06l2.25-2.25a.75.75 0 0 0 0-1.06l-2.25-2.25Z" clip-rule="evenodd" />
+                                </svg>
+                                <p class="text-[#484848] text-xs">Código-Fonte</p>
+                            </button>
+                            
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <textarea name="observacoes" id="obs" title="observacoes"
+                        class="w-full min-h-28 max-h-full p-3 shadow-lg border-[#BCBCBC]"></textarea>
+                    </div>
+                </div>
+                <div class="flex [&>button]:flex bg-[#F5F5F5] border-[#E5E5E5] border-2 p-2.5 justify-between">
+                    <button type="submit" class="bg-[#20B9AE] [&>*]:p-2 mr-4">
+                        <div class="bg-[#0000001A]">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                            class="size-5 fill-transparent">
+                                <path d="M7.24173 15.6999H7.24H3C2.81435 15.6999 2.6363 15.6262 2.50503 15.4949C2.37375 15.3636 2.3 15.1856 2.3 14.9999L2.3 10.7599L2.29999 10.7582C2.29946 10.6661 2.31712 10.5748 2.35196 10.4895C2.38671 10.4044 2.43787 10.327 2.50252 10.2617C2.50268 10.2615 2.50284 10.2614 2.503 10.2612L9.44198 3.33222L9.44251 3.3317L12.2625 0.501696L12.263 0.5012C12.3281 0.435589 12.4055 0.383513 12.4908 0.347976C12.5761 0.312437 12.6676 0.294141 12.76 0.294141C12.8524 0.294141 12.9439 0.312437 13.0292 0.347976C13.1144 0.383453 13.1917 0.435411 13.2567 0.500863C13.2568 0.500975 13.2569 0.501088 13.257 0.5012L17.4966 4.79082L17.4966 4.79083L17.4987 4.79294C17.5644 4.85802 17.6164 4.93544 17.652 5.02073C17.6875 5.10604 17.7058 5.19753 17.7058 5.28994C17.7058 5.38235 17.6875 5.47384 17.652 5.55914C17.6166 5.64414 17.5647 5.72131 17.4994 5.78624C17.4992 5.78647 17.499 5.78671 17.4987 5.78694L14.6601 8.56555L14.6601 8.56554L14.6577 8.56796L7.73873 15.4969C7.73858 15.4971 7.73843 15.4972 7.73828 15.4974C7.67296 15.5621 7.59555 15.6132 7.51047 15.648C7.42518 15.6828 7.33386 15.7005 7.24173 15.6999ZM12.9721 2.19781L12.76 1.98567L12.5479 2.19781L11.1279 3.61781L10.9157 3.82994L11.1279 4.04207L13.9579 6.87207L14.17 7.0842L14.3821 6.87207L15.8021 5.45207L16.0143 5.23994L15.8021 5.02781L12.9721 2.19781ZM3.78787 10.9578L3.7 11.0457V11.1699V13.9999V14.2999H4H6.83H6.95426L7.04213 14.2121L12.9721 8.28207L13.1843 8.06994L12.9721 7.85781L10.1421 5.02781L9.93 4.81567L9.71787 5.02781L3.78787 10.9578ZM1 18.2999H19C19.1857 18.2999 19.3637 18.3737 19.495 18.505C19.6263 18.6362 19.7 18.8143 19.7 18.9999C19.7 19.1856 19.6263 19.3636 19.495 19.4949C19.3637 19.6262 19.1857 19.6999 19 19.6999H1C0.814348 19.6999 0.6363 19.6262 0.505025 19.4949C0.37375 19.3636 0.3 19.1856 0.3 18.9999C0.3 18.8143 0.37375 18.6362 0.505025 18.505C0.6363 18.3737 0.814348 18.2999 1 18.2999Z" fill="white" stroke="#1DA79D" stroke-width="0.6"/>
+                            </svg>    
+                        </div>
+                        <p class="text-white self-center">Configurar Formas de Pagamento</p>
+                    </button>
+            
+                    <button type="submit" href="" class="bg-[#43B968] [&>*]:p-2">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 stroke-white fill-transparent">
+                                <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                            </svg>                                    
+                        </div>
+                        <p class="text-white self-center">Salvar</p>
+                    </button>
+                </div>
+            </form>
+        </section>
+        <footer class="bg-white shadow-md p-4 mt-4">
+            <p class="text-[#777777] self-start">
+                2024 © <strong>Faz Agilizar</strong>
+            </p>
+        </footer>
+    </main>
+</body>
+</html>
