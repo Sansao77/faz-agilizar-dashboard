@@ -1,0 +1,656 @@
+{
+    "pedidos":[
+        {
+            "id_interno": 508680,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2054,
+            "envio_pagamento":{
+                "envio":"EXCURSÃO",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 1.341,21",
+                "quantidade": 34
+            },
+            "loja_vendedor":{
+                "loja":"TESTE VENDEDORES",
+                "vendedor":"CAVANI"
+            },
+            "cliente": {
+                "nome": "Weslei Barros Souza",
+                "telefone": "+55 (62) 98517-7885"
+            },
+            "cadastro_status": {
+                "cadastro": "13/01/2024 às 18:59",
+                "status":{
+                    "titulo":"CRIADO",
+                    "cor":"#3E70C9"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":1
+        },
+        {
+            "id_interno": 508515,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2053,
+            "envio_pagamento":{
+                "envio":"EXCURSÃO",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 167,94",
+                "quantidade": 6
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "BBBBBB",
+                "telefone": "+55 (85) 99885-5663"
+            },
+            "cadastro_status": {
+                "cadastro": "13/01/2024 às 09:29",
+                "status":{
+                    "titulo":"CRIADO",
+                    "cor":"#3E70C9"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":1
+        },
+        {
+            "id_interno": 506192,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2052,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 499,90",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "LINDOMAR <br> SUPORTE",
+                "telefone": "+55 (81) 99326-1175"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:21",
+                "status":{
+                    "titulo":"EM TRANSPORTE",
+                    "cor":"#A567E2"
+                }
+            },
+            "enviado":{
+                "titulo":"SIM",
+                "data": "10/01/2024",
+                "link": "/"
+            },
+            "açoes":0
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2051,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 505379,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2050,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"PIX"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 1.226,93",
+                "quantidade": 21
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "EZEQUIEL",
+                "telefone": "+55 (81) 99195-9853"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 09:12",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 504374,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2049,
+            "envio_pagamento":{
+                "envio":"ENTREGA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 800,00",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "LINDOMAR <br> SUPORTE",
+                "telefone": "+55 (81) 99326-1175"
+            },
+            "cadastro_status": {
+                "cadastro": "09/01/2024 às 16:20",
+                "status":{
+                    "titulo":"EM TRANSPORTE",
+                    "cor":"#A567E2"
+                }
+            },
+            "enviado":{
+                "titulo":"SIM",
+                "data":"09/01/2024",
+                "link":"/"
+            },
+            "açoes":0
+        },
+        {
+            "id_interno": 504355,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2048,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 250,00",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"DIOGO"
+            },
+            "cliente": {
+                "nome": "LINDOMAR <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"CANCELADO",
+                    "cor":"#F44236"
+                }
+            },
+            "enviado":{
+                "titulo":"SIM",
+                "data":"09/01/2024",
+                "link":"/"
+            },
+            "açoes":0
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2047,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"CANCELADO",
+                    "cor":"#F44236"
+                }
+            },
+            "enviado":{
+                "titulo":"SIM",
+                "data":"09/01/2024",
+                "link":"/"
+            },
+            "açoes":0
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2046,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "09/01/2024 às 15:59",
+                "status":{
+                    "titulo":"CANCELADO",
+                    "cor":"#F44236"
+                }
+            },
+            "enviado":{
+                "titulo":"SIM",
+                "data":"09/01/2024",
+                "link":"/"
+            },
+            "açoes":0
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#F9D6F0",
+            "n_pedido": 2045,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "08/01/2024 às 10:26",
+                "status":{
+                    "titulo":"CANCELADO",
+                    "cor":"#F44236"
+                }
+            },
+            "enviado":{
+                "titulo":"SIM",
+                "data":"09/01/2024",
+                "link":"/"
+            },
+            "açoes":0
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2044,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2043,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2042,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2041,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2040,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2039,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#bae6fd",
+            "n_pedido": 2038,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#F9D6F0",
+            "n_pedido": 2037,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2036,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        },
+        {
+            "id_interno": 506161,
+            "bg_row_cor":"#FFFFFF",
+            "n_pedido": 2035,
+            "envio_pagamento":{
+                "envio":"RETIRADA <br> NA LOJA",
+                "pagamento":"DINHEIRO"
+            },
+            "valor_quantidade": {
+                "valor": "R$ 544,30",
+                "quantidade": 10
+            },
+            "loja_vendedor":{
+                "loja":"FAZ AGILIZAR <br> CARUARU",
+                "vendedor":"WELLITON"
+            },
+            "cliente": {
+                "nome": "PEDRO <br> SUPORTE",
+                "telefone": "+55 (81) 99276-3663"
+            },
+            "cadastro_status": {
+                "cadastro": "10/01/2024 às 15:04",
+                "status":{
+                    "titulo":"FINALIZADO",
+                    "cor":"#43B968"
+                }
+            },
+            "enviado":{
+                "titulo":"NÃO"
+            },
+            "açoes":2
+        }
+    ]
+}

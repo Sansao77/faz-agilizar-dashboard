@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Pedidos</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="shortcut icon" type="favicon.ico" href="/src/app/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../../js/pedidos.js"></script>
+    <script>
+        $(function(){
+            $("#add_menu").load("../menu.html");
+            $("#add_user_tab").load("../user_tab.html");
+        });
+    </script>
+</head>
+<body class="flex bg-[#E8EBF0]">
+    <div id="add_menu"></div>
+    <main class="flex flex-col min-w-fit w-full">
+        <div id="add_user_tab"></div>
+        <div class="flex self-center justify-between w-[98%] my-4 p-3 bg-white rounded-md shadow-md">
+            <div>
+                <p class="font-semibold mb-1.5">GESTOR DE PEDIDOS | DETALHES</p>
+                <a class="flex flex-wrap items-center text-xs text-[#73439A] font-bold hover:cursor-pointer">
+                    <svg viewBox="0 0 13 14" xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 fill-transparent stroke-[#73439A] mr-1">
+                        <path d="M10.5625 12.7583H8.25195V8.1626H4.44336V12.7583H2.13281V5.87744H1.37109V13.52H11.3242V5.87744H10.5625V12.7583ZM5.20508 12.7583V8.92432H7.49023V12.7583H5.20508ZM12.6953 5.47119L12.2383 6.08057L6.34766 1.76416L0.457031 6.08057L0 5.47119L6.34766 0.799316L12.6953 5.47119Z" fill="#73439A"/>
+                    </svg>    
+                    <p>Dashboard <span class="text-[#818A91]">/ Gestor de Pedidos / Detalhes</span></p>
+                </a>
+            </div>
+
+            <div class="grid grid-flow-col gap-x-4 items-center">
+                <a class="flex h-fit *:p-1.5 bg-[#20B9AE] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg viewBox="0 0 14 11" xmlns="http://www.w3.org/2000/svg"
+                        class="size-5 fill-transparent">
+                            <path d="M0.546875 10.6628H0.0898438V0.448556H0.546875V10.6628ZM1.00391 10.6556H0.771763V0.448556H1.00391V10.6556ZM1.68583 10.6556H1.46094V0.448556H1.68583V10.6556ZM2.82478 10.6556H2.59989V0.448556H2.82478V10.6556ZM3.96373 10.6556H3.51395V0.448556H3.96373V10.6556ZM4.87779 10.6556H4.6529V0.448556H4.87779V10.6556ZM5.33482 10.6556H5.10993V0.448556H5.33482V10.6556ZM5.79185 10.6556H5.56696V0.448556H5.79185V10.6556ZM6.9308 10.6556H6.47377V0.448556H6.9308V10.6556ZM8.06975 10.6556H7.61272V0.448556H8.06975V10.6556ZM8.98382 10.6556H8.52679V0.448556H8.98382V10.6556ZM9.89788 10.6556H9.44085V0.448556H9.89788V10.6556ZM10.5798 10.6556H10.1228V0.448556H10.5798V10.6556ZM11.9509 10.6556H11.269V0.448556H11.9509V10.6556ZM12.4079 10.6556H12.1758V0.448556H12.4079V10.6556ZM13.0898 10.6628H12.6328V0.448556H13.0898V10.6628Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                    <p class="px-8 py-3 text-sm">Conferir Pedidos</p>
+                </a>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#43B968] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-5 fill-white">
+                            <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                          </svg>
+                                                                     
+                    </div>
+                    <p class="px-8 py-3 text-sm">Criar Pedido</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="mx-3 mt-1 mb-3 p-2.5 bg-[#FDE9DA] border-2 border-[#00000020] shadow-md">
+            <span class="text-wrap text-xs text-[#F59345]">
+                Para enviar os pedidos para o ERP, selecione apenas os com status <strong>"Finalizado" </strong> <br>
+                <strong>Atenção!</strong> <br>
+                Caso queira enviar vários pedidos de uma vez para o ERP não poderá selecionar se quer enviar caso o cliente
+                tenha os dados de <strong>CNPJ</strong> ou <strong>CPF</strong>, o <strong>sistema vai dar prioridade ao CNPJ</strong> <br>
+                Caso queira selecionar o tipo de cliente que vai junto ao pedido envie os pedidos manualmente!
+            </span>
+        </div>
+        <form class="mx-3 mb-5 bg-white" method="get">
+            <div class="flex justify-end px-5">
+                <button type="button" class="flex justify-evenly p-1.5 border-x-2 border-b-2 rounded-b-lg">
+                    <p class="text-sm font-bold self-center">OCULTAR</p>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-6 stroke-black">
+                            <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                        </svg>                          
+                    </div>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-4 gap-x-6 gap-y-3 my-2.5 px-5">
+                <div class="flex flex-col">
+                    <label for="codigo-pedido" class="text-[#373A3C] font-bold">Código Pedido:</label>
+                    <input id="codigo-pedido" type="text" class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="dt-inicial" class="text-[#373A3C] font-bold">DT/Inicial:</label>
+                    <input id="dt-inicial" type="date" class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="forma-pagamento" class="text-[#373A3C] font-bold">Forma de Pagamento:</label>
+                    <input id="forma-pagamento" type="text" placeholder="Selecione uma ou mais opções..." class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="loja" class="text-[#373A3C] font-bold">Loja:</label>
+                    <input id="loja" type="text" placeholder="-- TODAS --" class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="id-pedido" class="text-[#373A3C] font-bold">ID Pedido Interno:</label>
+                    <input id="id-pedido" type="text" class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="dt-final" class="text-[#373A3C] font-bold">DT/Final:</label>
+                    <input id="dt-final" type="text" class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="forma-envio" class="text-[#373A3C] font-bold">Forma de Envio:</label>
+                    <input id="forma-envio" type="text" placeholder="Selecione uma ou mais opções..." class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="vendedor-gerente" class="text-[#373A3C] font-bold">Vendedor/Gerente:</label>
+                    <input id="vendedor-gerente" type="text" placeholder="-- TODOS --" class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="status" class="text-[#373A3C] font-bold">Status:</label>
+                    <input id="status" type="text" placeholder="Selecione uma ou mais opções..." class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="nome-cliente" class="text-[#373A3C] font-bold">Buscar cliente por nome:</label>
+                    <input id="nome-cliente" type="text" class="mt-1 p-2">
+                </div>
+
+                <div class="flex flex-col col-span-2">
+                    <p class="text-[#373A3C] font-bold">Buscar cliente por telefone:</p>
+                    <div class="flex mt-0.5">
+                        <select name="ddd" id="ddd" title="ddd" class="p-2">
+                            <option value="55">(+55) BRASIL</option>
+                        </select>
+                        <input id="telefone" type="tel" title="telefone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                         class="mt-1 p-2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-5 gap-x-7 gap-y-5 my-3 px-5">
+                <div class="flex flex-col">
+                    <label class="text-[#373A3C] font-bold">Código Pedido:</label>
+                    <fieldset class="grid grid-flow-col gap-x-2.5 mt-1.5 *:items-center [&_label]:mr-1">
+                        <div class="flex">
+                            <label for="codigo-avaliar-todos">TODOS</label>
+                            <input id="codigo-avaliar-todos" type="radio" name="codigo-avaliar" checked>
+                        </div>
+                        <div class="flex">
+                            <label for="codigo-avaliar-sim">SIM</label>
+                            <input id="codigo-avaliar-sim" type="radio" name="codigo-avaliar">
+                        </div>
+                        <div class="flex">
+                            <label for="codigo-avaliar-nao">NÃO</label>
+                            <input id="codigo-avaliar-nao" type="radio" name="codigo-avaliar">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-[#373A3C] font-bold">Unificado:</p>
+                    <fieldset class="grid grid-flow-col gap-x-2.5 mt-1.5 *:items-center [&_label]:mr-1">
+                        <div class="flex">
+                            <label for="unificado-todos">TODOS</label>
+                            <input id="unificado-todos" type="radio" name="unificado" checked>
+                        </div>
+                        <div class="flex">
+                            <label for="unificado-sim">SIM</label>
+                            <input id="unificado-sim" type="radio" name="unificado">
+                        </div>
+                        <div class="flex">
+                            <label for="unificado-nao">NÃO</label>
+                            <input id="unificado-nao" type="radio" name="unificado">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-[#373A3C] font-bold">É PDV:</p>
+                    <fieldset class="grid grid-flow-col gap-x-2.5 mt-1.5 *:items-center [&_label]:mr-1">
+                        <div class="flex">
+                            <label for="pdv-todos">TODOS</label>
+                            <input id="pdv-todos" type="radio" name="pdv" checked>
+                        </div>
+                        <div class="flex">
+                            <label for="pdv-sim">SIM</label>
+                            <input id="pdv-sim" type="radio" name="pdv">
+                        </div>
+                        <div class="flex">
+                            <label for="pdv-nao">NÃO</label>
+                            <input id="pdv-nao" type="radio" name="pdv">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-[#373A3C] font-bold">Conferido:</p>
+                    <fieldset class="grid grid-flow-col gap-x-2.5 mt-1.5 *:items-center [&_label]:mr-1">
+                        <div class="flex">
+                            <label for="conferido-todos">TODOS</label>
+                            <input id="conferido-todos" type="radio" name="conferido" checked>
+                        </div>
+                        <div class="flex">
+                            <label for="conferido-sim">SIM</label>
+                            <input id="conferido-sim" type="radio" name="conferido">
+                        </div>
+                        <div class="flex">
+                            <label for="conferido-nao">NÃO</label>
+                            <input id="conferido-nao" type="radio" name="conferido">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-5 gap-x-7 gap-y-5 px-5 mb-8">
+                <div class="flex flex-col">
+                    <p class="text-[#373A3C] font-bold">Utilizou Cupom: </p>
+                    <fieldset class="grid grid-flow-col gap-x-2.5 mt-1.5 *:items-center [&_label]:mr-1">
+                        <div class="flex">
+                            <label for="cupom-todos">TODOS</label>
+                            <input id="cupom-todos" type="radio" name="cupom" checked>
+                        </div>
+                        <div class="flex">
+                            <label for="cupom-sim">SIM</label>
+                            <input id="cupom-sim" type="radio" name="cupom">
+                        </div>
+                        <div class="flex">
+                            <label for="cupom-nao">NÃO</label>
+                            <input id="cupom-nao" type="radio" name="cupom">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-[#373A3C] font-bold">Enviado ERP:</p>
+                    <fieldset class="grid grid-flow-col gap-x-2.5 mt-1.5 *:items-center [&_label]:mr-1">
+                        <div class="flex">
+                            <label for="erp-todos">TODOS</label>
+                            <input id="erp-todos" type="radio" name="erp" checked>
+                        </div>
+                        <div class="flex">
+                            <label for="erp-sim">SIM</label>
+                            <input id="erp-sim" type="radio" name="erp">
+                        </div>
+                        <div class="flex">
+                            <label for="erp-nao">NÃO</label>
+                            <input id="erp-nao" type="radio" name="erp">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-[#373A3C] font-bold">É da Feira:</p>
+                    <fieldset class="grid grid-flow-col gap-x-2.5 mt-1.5 *:items-center [&_label]:mr-1">
+                        <div class="flex">
+                            <label for="feira-todos">TODOS</label>
+                            <input id="feira-todos" type="radio" name="feira" checked>
+                        </div>
+                        <div class="flex">
+                            <label for="feira-sim">SIM</label>
+                            <input id="feira-sim" type="radio" name="feira">
+                        </div>
+                        <div class="flex">
+                            <label for="feira-nao">NÃO</label>
+                            <input id="feira-nao" type="radio" name="feira">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="flex [&>button]:flex bg-[#F5F5F5] border-[#E5E5E5] border-2 px-5 py-2.5 justify-between">
+                <button type="submit" class="bg-[#20B9AE] [&>*]:p-2 mr-4">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                        class="size-5 fill-transparent">
+                            <path d="M7.24173 15.6999H7.24H3C2.81435 15.6999 2.6363 15.6262 2.50503 15.4949C2.37375 15.3636 2.3 15.1856 2.3 14.9999L2.3 10.7599L2.29999 10.7582C2.29946 10.6661 2.31712 10.5748 2.35196 10.4895C2.38671 10.4044 2.43787 10.327 2.50252 10.2617C2.50268 10.2615 2.50284 10.2614 2.503 10.2612L9.44198 3.33222L9.44251 3.3317L12.2625 0.501696L12.263 0.5012C12.3281 0.435589 12.4055 0.383513 12.4908 0.347976C12.5761 0.312437 12.6676 0.294141 12.76 0.294141C12.8524 0.294141 12.9439 0.312437 13.0292 0.347976C13.1144 0.383453 13.1917 0.435411 13.2567 0.500863C13.2568 0.500975 13.2569 0.501088 13.257 0.5012L17.4966 4.79082L17.4966 4.79083L17.4987 4.79294C17.5644 4.85802 17.6164 4.93544 17.652 5.02073C17.6875 5.10604 17.7058 5.19753 17.7058 5.28994C17.7058 5.38235 17.6875 5.47384 17.652 5.55914C17.6166 5.64414 17.5647 5.72131 17.4994 5.78624C17.4992 5.78647 17.499 5.78671 17.4987 5.78694L14.6601 8.56555L14.6601 8.56554L14.6577 8.56796L7.73873 15.4969C7.73858 15.4971 7.73843 15.4972 7.73828 15.4974C7.67296 15.5621 7.59555 15.6132 7.51047 15.648C7.42518 15.6828 7.33386 15.7005 7.24173 15.6999ZM12.9721 2.19781L12.76 1.98567L12.5479 2.19781L11.1279 3.61781L10.9157 3.82994L11.1279 4.04207L13.9579 6.87207L14.17 7.0842L14.3821 6.87207L15.8021 5.45207L16.0143 5.23994L15.8021 5.02781L12.9721 2.19781ZM3.78787 10.9578L3.7 11.0457V11.1699V13.9999V14.2999H4H6.83H6.95426L7.04213 14.2121L12.9721 8.28207L13.1843 8.06994L12.9721 7.85781L10.1421 5.02781L9.93 4.81567L9.71787 5.02781L3.78787 10.9578ZM1 18.2999H19C19.1857 18.2999 19.3637 18.3737 19.495 18.505C19.6263 18.6362 19.7 18.8143 19.7 18.9999C19.7 19.1856 19.6263 19.3636 19.495 19.4949C19.3637 19.6262 19.1857 19.6999 19 19.6999H1C0.814348 19.6999 0.6363 19.6262 0.505025 19.4949C0.37375 19.3636 0.3 19.1856 0.3 18.9999C0.3 18.8143 0.37375 18.6362 0.505025 18.505C0.6363 18.3737 0.814348 18.2999 1 18.2999Z" fill="white" stroke="#1DA79D" stroke-width="0.6"/>
+                        </svg>    
+                    </div>
+                    <p class="text-white self-center">Imprimir busca</p>
+                </button>
+        
+                <button type="submit" href="" class="bg-[#3E70C9] [&>*]:p-2">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 stroke-white fill-transparent">
+                            <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                        </svg>                                    
+                    </div>
+                    <p class="text-white self-center">Filtrar</p>
+                </button>
+            </div>
+        </form>
+
+        <div class="mx-3 mt-1 mb-3 p-2.5 bg-[#C5F1ED] border-2 border-[#00000020] shadow-md">
+            <span class="text-wrap text-sm font-bold text-[#20B9AE]">
+                Você pode finalizar ou cancelar os pedidos selecionados que estão em status "criado" na listagem atual!
+            </span>
+        </div>
+
+        <section class="px-3 pt-1 pb-0.5">
+            <div class="py-3 w-5/12 grid grid-cols-5 gap-x-3">
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#F44236] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4 fill-white">
+                            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>                                                        
+                    </div>
+                    <p class="px-3 text-xs">Cancelar</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#43B968] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4 fill-white">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                        </svg>                     
+                    </div>
+                    <p class="px-3 text-xs">Finalizar</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#36394F] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-4 fill-transparent stroke-white">
+                            <path fill-rule="evenodd" d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 0 0 3 3h.27l-.155 1.705A1.875 1.875 0 0 0 7.232 22.5h9.536a1.875 1.875 0 0 0 1.867-2.045l-.155-1.705h.27a3 3 0 0 0 3-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0 0 18 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM16.5 6.205v-2.83A.375.375 0 0 0 16.125 3h-8.25a.375.375 0 0 0-.375.375v2.83a49.353 49.353 0 0 1 9 0Zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 0 1-.374.409H7.232a.375.375 0 0 1-.374-.409l.526-5.784a.373.373 0 0 1 .333-.337 41.741 41.741 0 0 1 8.566 0Zm.967-3.97a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H18a.75.75 0 0 1-.75-.75V10.5ZM15 9.75a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V10.5a.75.75 0 0 0-.75-.75H15Z" clip-rule="evenodd" />
+                        </svg>                          
+                    </div>
+                    <p class="px-3  text-xs">Imprimir</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#F59345] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 13 14" xmlns="http://www.w3.org/2000/svg"
+                        class="size-4 fill-transparent">
+                            <path d="M5.11215 10.3097C4.2668 9.53892 3.79439 8.44493 3.79439 7.30122C3.79439 5.03866 5.63428 3.19878 7.9217 3.19878H10.0848L8.12061 1.20972L8.64273 0.687589L11.5269 3.57173L8.64273 6.45587L8.12061 5.93374L10.0848 3.94468H7.9217C6.05695 3.94468 4.54029 5.46134 4.54029 7.30122C4.54029 8.24603 4.91324 9.1411 5.60941 9.78755L5.11215 10.3097ZM12.0241 7.05259V11.9009C12.0241 12.0998 11.875 12.2739 11.6512 12.2739H1.18375C0.95998 12.2739 0.810801 12.0998 0.810801 11.9009V7.05259H0.0400391V11.9009C0.0400391 12.5225 0.562168 13.0198 1.18375 13.0198H11.6512C12.2728 13.0198 12.77 12.5225 12.77 11.9009V7.05259H12.0241Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                    <p class="px-3  text-xs">Enviar</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#20B9AE] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg"
+                        class="size-4 fill-transparent">
+                            <path d="M8.26978 0.0357227H0.0400391V6.77367H8.26978V0.0357227ZM7.52389 6.02777H0.785937V0.781622H7.52389V6.02777ZM10.5323 9.03623H2.27773V7.54443H3.02363V8.26547H9.78644V3.04418H9.04055V2.27342H10.5323V9.03623ZM12.77 4.53598V11.2739H4.54029V9.78213H5.28619V10.528H12.0241V5.28188H11.2782V4.53598H12.77Z" fill="white"/>
+                        </svg>                                                        
+                    </div>
+                    <p class="px-3  text-xs">Unificar</p>
+                </button>
+            </div>
+
+            <div class="flex mt-1 mb-3 text-end text-sm bg-transparent [&>div]:mr-4">
+                <div class="relative">
+                    <span class="absolute -right-3.5 size-3 bg-[#B8CCF1] rounded-full shadow-xl"></span>
+                    <p>PEDIDO SITE</p>
+                </div>
+                <div class="relative">
+                    <span class="absolute -right-3.5 size-3 bg-[#FCF8E3] rounded-full shadow-xl"></span>
+                    <p>PEDIDO INTERNO</p>
+                </div>
+                <div class="relative">
+                    <span class="absolute -right-3.5 size-3 bg-[#F9D6F0] rounded-full shadow-xl"></span>
+                    <p>PEDIDO DA FEIRA</p>
+                </div>
+                <p>VENDA BALCÃO (PDV)</p>
+            </div>
+        </section>
+
+        <section class="bg-white mx-2">
+            <div class="my-2.5 mx-2.5 mb-6 border-2 overflow-x-auto">
+                <div class="grid grid-cols-12 divide-x-2 items-center">
+                    <div>&nbsp;</div>
+                    <p class="text-center !py-[0.5px] text-[0.7rem]/[14px] font-bold">
+                        ID <br> Interno
+                    </p>
+                    <p class="text-center text-[0.7rem] font-bold">
+                        Pedido
+                    </p>
+                    <p class="text-center !py-[0.5px] text-[0.7rem]/[14px] font-bold">
+                        Forma <br> Envio/Pagamento
+                    </p>
+                    <p class="text-center !py-[0.5px] text-[0.7rem]/[14px] font-bold">
+                        Valor/Quant <br> Produtos
+                    </p>
+                    <p class="text-center text-[0.7rem] font-bold">
+                        Loja/Vendedor
+                    </p>
+                    <p class="text-center text-[0.7rem] font-bold">
+                        Cliente
+                    </p>
+                    <p class="text-center !py-[0.5px] text-[0.7rem]/[14px] font-bold">
+                        Dt. <br> Cadastro/Status
+                    </p>
+                    <p class="text-center text-[0.7rem] font-bold">
+                        Enviado
+                    </p>
+                    <p class="text-center text-[0.7rem] font-bold">
+                        Conferido
+                    </p>
+                    <p class="text-center !py-[0.5px] text-[0.7rem]/[14px] font-bold">
+                        Enviado <br> ERP
+                    </p>
+                    <p class="text-center text-[0.7rem] font-bold">
+                        Ações
+                    </p>
+                </div>
+                <div id="pedidos" class="grid grid-flow-row"></div>
+            </div>
+            <div class="flex justify-between border-t-2 border-[#00000020] p-3">
+                <div class="grid grid-cols-8 *:text-[#999999] *:text-center border-2 bordere-[#DDDDDD] divide-x-2
+                w-1/5">
+                    <div class="bg-[#3E70C9] !text-white">1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-5 fill-[#999999]">
+                            <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                        </svg>                          
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        class="size-5 fill-[#999999]">
+                            <path fill-rule="evenodd" d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                        </svg>                          
+                    </div>
+                </div>
+                <p class="text-sm text-center font-bold mr-40">
+                    EXIBINDO PÁGINA DE 1 ATÉ 20 DE 2054
+                </p>
+            </div>
+        </section>
+        <footer class="bg-white shadow-md p-4 mt-4">
+            <p class="text-[#777777] self-start">
+                2024 © <strong>Faz Agilizar</strong>
+            </p>
+        </footer>
+    </main>
+</body>
+</html>

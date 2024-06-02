@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Pedidos - Detalhes</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="shortcut icon" type="favicon.ico" href="/src/app/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#add_menu").load("../menu.html");
+            $("#add_user_tab").load("../user_tab.html");
+        });
+    </script>
+</head>
+<body class="flex bg-[#E8EBF0]">
+    <div id="add_menu"></div>
+    <main class="flex flex-col min-w-fit w-full">
+        <div id="add_user_tab"></div>
+        <div class="flex self-center justify-between w-[98%] my-4 p-3 bg-white rounded-md shadow-md">
+            <div>
+                <p class="font-semibold mb-1.5">GESTOR DE PEDIDOS | DETALHES</p>
+                <a class="flex flex-wrap items-center text-xs text-[#73439A] font-bold hover:cursor-pointer">
+                    <svg viewBox="0 0 13 14" xmlns="http://www.w3.org/2000/svg"
+                    class="w-3 h-3 fill-transparent stroke-[#73439A] mr-1">
+                        <path d="M10.5625 12.7583H8.25195V8.1626H4.44336V12.7583H2.13281V5.87744H1.37109V13.52H11.3242V5.87744H10.5625V12.7583ZM5.20508 12.7583V8.92432H7.49023V12.7583H5.20508ZM12.6953 5.47119L12.2383 6.08057L6.34766 1.76416L0.457031 6.08057L0 5.47119L6.34766 0.799316L12.6953 5.47119Z" fill="#73439A"/>
+                    </svg>    
+                    <p>Dashboard <span class="text-[#818A91]">/ Gestor de Pedidos / Detalhes</span></p>
+                </a>
+            </div>
+
+            <div class="grid grid-flow-col gap-x-4 items-center">
+                <a class="flex h-fit *:p-1.5 bg-[#F44236] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" 
+                        class="size-4 fill-white">
+                            <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+                        </svg>                          
+                    </div>
+                    <p class="px-3 text-xs">Voltar</p>
+                </a>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#36394F] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-4 fill-transparent stroke-white">
+                            <path fill-rule="evenodd" d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 0 0 3 3h.27l-.155 1.705A1.875 1.875 0 0 0 7.232 22.5h9.536a1.875 1.875 0 0 0 1.867-2.045l-.155-1.705h.27a3 3 0 0 0 3-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0 0 18 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM16.5 6.205v-2.83A.375.375 0 0 0 16.125 3h-8.25a.375.375 0 0 0-.375.375v2.83a49.353 49.353 0 0 1 9 0Zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 0 1-.374.409H7.232a.375.375 0 0 1-.374-.409l.526-5.784a.373.373 0 0 1 .333-.337 41.741 41.741 0 0 1 8.566 0Zm.967-3.97a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H18a.75.75 0 0 1-.75-.75V10.5ZM15 9.75a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V10.5a.75.75 0 0 0-.75-.75H15Z" clip-rule="evenodd" />
+                        </svg>                                           
+                    </div>
+                    <p class="px-3 text-xs">Imprimir</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#3E70C9] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                         class="size-4 fill-transparent stroke-white">
+                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                        </svg>                            
+                    </div>
+                    <p class="px-3 !py-[0.5px] text-xs/[14px]">Editar<br>Informações</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#36394F] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-4 fill-white">
+                            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>                           
+                    </div>
+                    <p class="px-3 text-xs">Cancelar</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#20B9AE] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-4 fill-white">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                        </svg>                                                                              
+                    </div>
+                    <p class="px-3 !py-[0.5px] text-xs/[14px]">Confirmar<br>Pagamento</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#F59345] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-4 fill-white">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                        </svg>                          
+                    </div>
+                    <p class="px-3 text-xs">Em Separação</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#A567E2] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                        class="size-4 fill-white">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p class="px-3 !py-[0.5px] text-xs/[14px]">Aguardando<br>Retirada</p>
+                </button>
+            </div>
+        </div>
+
+        <section class="px-3 pt-1 pb-0.5">
+            <p class="text-lg font-medium">Mais Opções</p>
+            <div class="py-3 w-1/4 grid grid-cols-3 gap-x-5">
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#A567E2] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 6 13" xmlns="http://www.w3.org/2000/svg"
+                        class="size-4 fill-transparent">
+                            <path d="M4.36719 7.3125C4.3418 7.3125 4.3418 7.28711 4.31641 7.28711L3.04688 6.32227V1.95508C3.91016 2.10742 4.57031 2.84375 4.57031 3.70703L4.95117 3.75781L5.33203 3.70703C5.33203 2.41211 4.3418 1.37109 3.04688 1.19336V0H2.28516V1.19336C0.990234 1.37109 0 2.41211 0 3.70703C0 4.41797 0.304688 5.10352 0.863281 5.58594V5.61133H0.888672L2.28516 6.67773V11.0449C1.42188 10.8926 0.761719 10.1562 0.761719 9.29297H0C0 10.5879 0.990234 11.6289 2.28516 11.8066V13H3.04688V11.8066C4.3418 11.6289 5.33203 10.5879 5.33203 9.29297C5.33203 8.53125 4.97656 7.82031 4.36719 7.3125ZM1.37109 5.02734C0.990234 4.69727 0.761719 4.21484 0.761719 3.70703C0.761719 2.84375 1.42188 2.10742 2.28516 1.95508V5.71289L1.37109 5.02734ZM3.04688 11.0449V7.28711L3.88477 7.92188C4.31641 8.27734 4.57031 8.75977 4.57031 9.29297C4.57031 10.1562 3.91016 10.8926 3.04688 11.0449Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                    <p class="px-3 text-xs">Desconto</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#3E70C9] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"
+                        class="size-4 fill-transparent">
+                            <path d="M13.5195 0.609985H5.11523V2.92053H2.90625L1.99219 5.96741H0.519531V9.776H2.04297V9.80139C2.04297 10.6393 2.72852 11.3248 3.56641 11.3248C4.42969 11.3248 5.11523 10.6393 5.11523 9.80139V9.776H8.92383V9.80139C8.92383 10.6393 9.60938 11.3248 10.4727 11.3248C11.3105 11.3248 11.9961 10.6393 11.9961 9.80139V9.776H13.5195V0.609985ZM3.49023 3.68225H5.11523V5.96741H2.80469L3.49023 3.68225ZM3.56641 10.5631C3.16016 10.5631 2.80469 10.2076 2.80469 9.80139C2.80469 9.36975 3.16016 9.03967 3.56641 9.03967C3.99805 9.03967 4.35352 9.36975 4.35352 9.80139C4.35352 10.2076 3.99805 10.5631 3.56641 10.5631ZM10.4727 10.5631C10.041 10.5631 9.68555 10.2076 9.68555 9.80139C9.68555 9.36975 10.041 9.03967 10.4727 9.03967C10.8789 9.03967 11.2344 9.36975 11.2344 9.80139C11.2344 10.2076 10.8789 10.5631 10.4727 10.5631ZM12.7578 9.01428H11.7676C11.4883 8.55725 11.0059 8.27795 10.4727 8.27795C9.91406 8.27795 9.43164 8.55725 9.15234 9.01428H4.88672C4.60742 8.55725 4.125 8.27795 3.56641 8.27795C3.0332 8.27795 2.55078 8.55725 2.27148 9.01428H1.28125V6.72913H5.87695V1.3717H12.7578V9.01428Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                    <p class="px-3 text-xs">Frete</p>
+                </button>
+
+                <button type="button" class="flex h-fit *:p-1.5 bg-[#20B9AE] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A]">
+                        <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                        class="size-4 fill-transparent">
+                            <path d="M6.77275 6.53678C6.77275 6.53678 6.81994 6.47811 6.91431 6.36075C7.00867 6.24339 7.08732 6.18472 7.15023 6.18472C7.21314 6.18472 7.44906 6.29118 7.85799 6.50412C8.26692 6.71705 8.48349 6.8453 8.50768 6.88885C8.51736 6.91305 8.5222 6.94934 8.5222 6.99774C8.5222 7.15744 8.48106 7.34134 8.3988 7.54943C8.32136 7.73817 8.14957 7.89666 7.8834 8.0249C7.61723 8.15315 7.37042 8.21727 7.14297 8.21727C6.86712 8.21727 6.40738 8.06725 5.76374 7.7672C5.28947 7.54943 4.87812 7.26391 4.52969 6.91063C4.18125 6.55735 3.82313 6.10971 3.45534 5.56769C3.1069 5.04988 2.9351 4.58045 2.93994 4.15942V4.10135C2.95446 3.66096 3.13352 3.27865 3.47712 2.95441C3.59326 2.84794 3.71909 2.79471 3.85459 2.79471C3.88363 2.79471 3.92718 2.79834 3.98525 2.8056C4.04333 2.81286 4.0893 2.81649 4.12318 2.81649C4.21513 2.81649 4.27925 2.83222 4.31554 2.86367C4.35184 2.89513 4.38934 2.96167 4.42806 3.0633C4.46677 3.16009 4.54663 3.37302 4.66761 3.7021C4.7886 4.03118 4.84909 4.21266 4.84909 4.24653C4.84909 4.34816 4.76561 4.48729 4.59865 4.66393C4.43169 4.84057 4.34821 4.95309 4.34821 5.00148C4.34821 5.03536 4.36031 5.07165 4.3845 5.11037C4.54905 5.46364 4.79585 5.79514 5.12493 6.10487C5.39594 6.36136 5.76132 6.60575 6.22106 6.83804C6.27913 6.87191 6.33237 6.88885 6.38076 6.88885C6.45335 6.88885 6.58402 6.7715 6.77275 6.53678ZM5.67663 10.032C6.29123 10.032 6.88043 9.91106 7.44422 9.66909C8.00801 9.42712 8.49316 9.10288 8.89967 8.69637C9.30618 8.28986 9.63042 7.80471 9.8724 7.24092C10.1144 6.67713 10.2354 6.08793 10.2354 5.47332C10.2354 4.85872 10.1144 4.26952 9.8724 3.70573C9.63042 3.14194 9.30618 2.65679 8.89967 2.25028C8.49316 1.84377 8.00801 1.51953 7.44422 1.27756C6.88043 1.03558 6.29123 0.914599 5.67663 0.914599C5.06202 0.914599 4.47282 1.03558 3.90903 1.27756C3.34524 1.51953 2.86009 1.84377 2.45358 2.25028C2.04707 2.65679 1.72283 3.14194 1.48086 3.70573C1.23889 4.26952 1.1179 4.85872 1.1179 5.47332C1.1179 6.45572 1.40827 7.34618 1.989 8.14468L1.41553 9.83605L3.17223 9.2771C3.93686 9.7804 4.77166 10.032 5.67663 10.032ZM3.55334 0.435498C3.55334 0.435498 3.72211 0.362906 4.05966 0.217725C4.39721 0.0725422 4.9362 -4.86374e-05 5.67663 -4.86374e-05C6.41706 -4.86374e-05 7.12482 0.145133 7.79992 0.435498C8.47502 0.725863 9.05695 1.11543 9.54574 1.60422C10.0345 2.093 10.4241 2.67493 10.7145 3.35003C11.0048 4.02513 11.15 4.73289 11.15 5.47332C11.15 6.21375 11.0048 6.92152 10.7145 7.59661C10.4241 8.27171 10.0345 8.85365 9.54574 9.34243C9.05695 9.83121 8.47502 10.2208 7.79992 10.5111C7.12482 10.8015 6.41706 10.9467 5.67663 10.9467C4.73294 10.9467 3.84975 10.7192 3.02705 10.2643L0 11.2371L0.98724 8.29712C0.464583 7.4357 0.203255 6.49444 0.203255 5.47332C0.203255 4.73289 0.348437 4.02513 0.638802 3.35003C0.929167 2.67493 1.31874 2.093 1.80752 1.60422C2.2963 1.11543 2.87824 0.725863 3.55334 0.435498Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                    <p class="px-3 !py-[0.5px] text-xs/[14px]">Enviar Link<br>Pagamento</p>
+                </button>
+            </div>
+        </section>
+
+        <section class="flex flex-col px-3 shadow-lg">
+            <div class="bg-[#F5F5F5] p-3 border-[#00000020] border-b-2">
+                <p class="text-lg font-semibold">DETALHES DO PEDIDO</p>
+            </div>
+            <div class="p-3 grid grid-cols-4 gap-x-5 gap-y-3 bg-white">
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="pedido" class="font-semibold">Pedido:</label>
+                    <input id="pedido" type="text" value="2060" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="forma-envio" class="font-semibold">Forma de Envio:</label>
+                    <input id="forma-envio" type="text" value="Retirada na Loja" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="forma-pagamento" class="font-semibold">Forma de Pagamento:</label>
+                    <input id="forma-pagamento" type="text" value="Cartão" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="data-criacao" class="font-semibold">Data de Criação:</label>
+                    <input id="data-criacao" type="text" value="24/01/2024 às 16:07" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="qtd-produtos" class="font-semibold">Quantidade de Produtos:</label>
+                    <input id="qtd-produtos" type="text" value="2" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="valor-total" class="font-semibold">Valor Total:</label>
+                    <input id="valor-total" type="text" value="R$ 140,00" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="status" class="font-semibold">Status:</label>
+                    <input id="status" type="text" value="Criado" 
+                    class="appearance-none border-none focus:outline-none ml-1 
+                    p-3 bg-[#3E70C9] text-white w-1/4 h-1/2" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="data-finalizacao" class="font-semibold text-sm">Data de Finalização/Cancelamento:</label>
+                    <input id="data-finalizacao" type="text" placeholder="Nao informado" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col col-span-2 border-b-2 border-gray-400">
+                    <label for="obs" class="font-semibold">Observações</label>
+                    <input id="obs" type="text" placeholder="Nao informado" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="cupom" class="font-semibold">Cupom Utilizado:</label>
+                    <input id="cupom" type="text" value="Não Aplicado" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="peso-total" class="font-semibold">Peso Total:</label>
+                    <input id="peso-total" type="text" placeholder="Nao informado" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col px-3 pt-6 shadow-lg">
+            <div class="bg-[#F5F5F5] p-3 border-[#00000020] border-b-2">
+                <p class="text-lg font-semibold">CONSUMIDOR</p>
+            </div>
+            <form class="p-3 grid grid-cols-4 gap-x-5 gap-y-3 [&>div]:m-3 bg-white">
+                <div class="flex flex-col col-span-4 border-b-2 border-gray-400">
+                    <label for="nome-consumidor" class="font-semibold">Nome:</label>
+                    <input id="nome-consumidor" type="text" value="Consumidor PDV" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col col-span-3 border-b-2 border-gray-400">
+                    <label for="email-consumidor" class="font-semibold">E-mail:</label>
+                    <input id="email-consumidor" type="text" value="consumidorpdv@fazagilizar.com.br" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+
+                <div class="flex flex-col border-b-2 border-gray-400">
+                    <label for="celular-consumidor" class="font-semibold mb-2">Telefone/Celular:</label>
+                    <input id="celular-consumidor" type="text" value="+55 6391582079" 
+                    class="appearance-none border-none focus:outline-none bg-transparent" readonly>
+                </div>
+            </form>
+        </section>
+
+        <section class="flex flex-col px-3 pt-6 mb-6 shadow-lg">
+            <div class="flex bg-[#F5F5F5] p-3 border-[#00000020] border-b-2">
+                <p class="text-lg font-semibold mr-5">PRODUTOS</p>
+                <button type="button" 
+                class="flex h-fit *:p-1.5 bg-[#43B968] shadow-md cursor-pointer text-center text-white">
+                    <div class="bg-[#0000001A] h-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-5 fill-white">
+                            <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                        </svg>                                                    
+                    </div>
+                    <p class="px-3 text-xs">Adicionar</p>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-12 gap-1 *:bg-white *:p-3">
+                <div class="flex justify-center">
+                    <svg viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"
+                    class="size-4 fill-transparent self-center">
+                        <path d="M0.160156 0.886719V12.3633H11.6367V0.886719H0.160156ZM10.875 11.6016H0.921875V10.0781H10.875V11.6016ZM0.921875 9.29102V1.64844H10.875V9.29102H0.921875ZM10.2656 7.89453L9.73242 8.45312L7.87891 6.65039L6.68555 7.91992L4.78125 4.56836L2.19141 8.35156L1.55664 7.91992L4.85742 3.12109L6.83789 6.65039L7.85352 5.55859L10.2656 7.89453Z" fill="#373A3C"/>
+                    </svg>                        
+                </div>
+                <p class="col-span-6 text-xs font-bold">Nome</p>
+                <p class="text-center text-xs font-bold">Valor</p>
+                <p class="text-center text-xs font-bold">Quantidade</p>
+                <p class="text-center text-xs font-bold">Total</p>
+                <p class="text-center text-xs font-bold">Status</p>
+                <p class="text-center text-xs font-bold">Ações</p>
+            </div>
+            <div class="grid grid-flow-row 
+            [&_p]:flex [&_p]:items-center [&_p]:text-sm">
+                <div class="grid grid-cols-12 gap-1 bg-[#0000000D]">
+                    <div class="flex justify-center p-3">
+                        <img src="/public/produto-exemplo.png" alt="sapato-exemplo"
+                        class="size-8">                  
+                    </div>
+                    <p class="col-span-6">
+                        TENIS FEMININO -36 (PRETO C/ ROSA) - REF: 01t01
+                    </p>
+                    <p class="justify-center">R$ 70,00</p>
+                    <p class="justify-center font-bold">2</p>
+                    <p class="justify-center font-bold">R$ 140,00</p>
+                    <div class="justify-center p-4">
+                        <div 
+                        class="text-white text-center font-semibold rounded-2xl text-[0.5rem] bg-[#43B968] p-0.5">
+                            Disponível
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center p-4">
+                        <button type="button" title="editar">
+                            <div class="bg-[#3E70C9] h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                                class="size-6 fill-transparent stroke-white p-1.5">
+                                    <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                                </svg>                                             
+                            </div>
+                        </button>
+                        <button type="button" title="eliminar">
+                            <div class="bg-[#36394F] h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                                class="size-6 fill-transparent stroke-white p-1.5">
+                                    <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z" clip-rule="evenodd" />
+                                </svg>                                                                             
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-white shadow-md p-4 mt-4">
+            <p class="text-[#777777] self-start">
+                2024 © <strong>Faz Agilizar</strong>
+            </p>
+        </footer>
+    </main>
+</body>
+</html>
