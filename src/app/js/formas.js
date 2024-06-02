@@ -2,6 +2,7 @@ import formas from '../../../json/formas.json' with { type: 'json' };
 const pagamentoID = document === null || document === void 0 ? void 0 : document.getElementById("formas-pagamento");
 const envioID = document === null || document === void 0 ? void 0 : document.getElementById("formas-envio");
 const integracoesID = document === null || document === void 0 ? void 0 : document.getElementById("formas-integracoes");
+//Condiciona as estilização de certos elementos na página 'envio.html'
 const condicionalEnvio = (i) => {
     if ((i % 2 === 1 && i < 4) || i > 7)
         return 'class="w-28 h-20"';
@@ -10,6 +11,7 @@ const condicionalEnvio = (i) => {
     else
         return 'class="size-20"';
 };
+//Condiciona as estilização de certos elementos na página 'integracoes.html'
 const condicionalIntegracoes = (i) => {
     if (i === 1)
         return 'class="size-20 rounded-full overflow-hidden"';
@@ -18,6 +20,7 @@ const condicionalIntegracoes = (i) => {
     else
         return 'class="size-20"';
 };
+//Cria os divs de elementos pagamento
 function pagamentoHTML() {
     const formaPagamento = formas.pagamento;
     pagamentoID.innerHTML = "";
@@ -29,12 +32,16 @@ function pagamentoHTML() {
             class="size-20"></img>
             <p class="text-lg font-bold text-wrap mt-1.5 mb-3">${formaPagamento[i].nome}</p>
             <button type="button" 
-            class="bg-[#20B9AE] text-white px-5 py-2 rounded-sm justify-self-center">Selecionar</button>
+            class="bg-[${i === 0 ? "#3E70C9" : "#20B9AE"}] text-white px-5 py-2 rounded-sm justify-self-center
+            hover:bg-opacity-75">
+            ${i === 0 ? "Selecionado" : "Selecionar"}
+            </button>
         </div>
         `;
         pagamentoID.innerHTML += elementoHTML;
     }
 }
+//Cria os divs de elementos envio
 function envioHTML() {
     const formaEnvio = formas.envio;
     envioID.innerHTML = "";
@@ -46,12 +53,16 @@ function envioHTML() {
             ${condicionalEnvio(i)}></img>
             <p class="text-lg font-bold text-wrap mt-1.5 mb-3">${formaEnvio[i].nome}</p>
             <button type="button" 
-            class="bg-[#20B9AE] text-white px-5 py-2 rounded-sm justify-self-center">Selecionar</button>
+            class="bg-[${i === 0 ? "#3E70C9" : "#20B9AE"}] text-white px-5 py-2 rounded-sm justify-self-center
+            hover:bg-opacity-75">
+            ${i === 0 ? "Selecionado" : "Selecionar"}
+            </button>
         </div>
         `;
         envioID.innerHTML += elementoHTML;
     }
 }
+//Cria os divs de elementos integrações
 function integracoesHTML() {
     const formaIntegracoes = formas.integracoes;
     integracoesID.innerHTML = "";
@@ -63,12 +74,16 @@ function integracoesHTML() {
             ${condicionalIntegracoes(i)}></img>
             <p class="text-lg font-bold text-wrap mt-1.5 mb-3">${formaIntegracoes[i].nome}</p>
             <button type="button" 
-            class="bg-[#20B9AE] text-white px-5 py-2 rounded-sm justify-self-center">Selecionar</button>
+            class="bg-[${i === 0 ? "#3E70C9" : "#20B9AE"}] text-white px-5 py-2 rounded-sm justify-self-center
+            hover:bg-opacity-75">
+            ${i === 0 ? "Selecionado" : "Selecionar"}
+            </button>
         </div>
         `;
         integracoesID.innerHTML += elementoHTML;
     }
 }
+//Inicializar os divs se os IDs definidos existem na página
 if (pagamentoID) {
     pagamentoHTML();
 }

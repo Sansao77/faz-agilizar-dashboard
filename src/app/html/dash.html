@@ -57,10 +57,11 @@
                         <p class="text-3xl font-bold">3856</p>
                     </div>
                     <form action="" method="get">
-                        <select name="periodo" title="periodo" id="periodo-total">
-                            <option value="mes">Este mês</option>
-                            <option value="semestre">Este semestre</option>
-                            <option value="ano">Este ano</option>
+                        <select name="periodo" title="periodo" id="periodo-total"
+                        class="border-none text-sm text-[#949494] p-1">
+                            <option value="mes">Este Mês</option>
+                            <option value="semestre">Este Semestre</option>
+                            <option value="ano">Este Ano</option>
                         </select>
                     </form>
                 </div>
@@ -79,10 +80,11 @@
                         <p class="text-3xl font-bold">1052</p>
                     </div>
                     <form action="" method="get">
-                        <select name="periodo" title="periodo" id="periodo-online">
-                            <option value="mes">Este mês</option>
-                            <option value="semestre">Este semestre</option>
-                            <option value="ano">Este ano</option>
+                        <select name="periodo" title="periodo" id="periodo-online"
+                        class="border-none text-sm text-[#949494] p-1">
+                            <option value="mes">Este Mês</option>
+                            <option value="semestre">Este Semestre</option>
+                            <option value="ano">Este Ano</option>
                         </select>
                     </form>
                 </div>
@@ -101,10 +103,11 @@
                         <p class="text-3xl font-bold">980</p>
                     </div>
                     <form action="" method="get">
-                        <select name="periodo" title="periodo" id="periodo-feira">
-                            <option value="mes">Este mês</option>
-                            <option value="semestre">Este semestre</option>
-                            <option value="ano">Este ano</option>
+                        <select name="periodo" title="periodo" id="periodo-feira"
+                        class="border-none text-sm text-[#949494] p-1">
+                            <option value="mes">Este Mês</option>
+                            <option value="semestre">Este Semestre</option>
+                            <option value="ano">Este Ano</option>
                         </select>
                     </form>
                 </div>
@@ -123,10 +126,11 @@
                         <p class="text-3xl font-bold">750</p>
                     </div>
                     <form action="" method="get">
-                        <select name="periodo" title="periodo" id="periodo-loja-1">
-                            <option value="mes">Este mês</option>
-                            <option value="semestre">Este semestre</option>
-                            <option value="ano">Este ano</option>
+                        <select name="periodo" title="periodo" id="periodo-loja-1"
+                        class="border-none text-sm text-[#949494] p-1">
+                            <option value="mes">Este Mês</option>
+                            <option value="semestre">Este Semestre</option>
+                            <option value="ano">Este Ano</option>
                         </select>
                     </form>
                 </div>
@@ -145,10 +149,11 @@
                         <p class="text-3xl font-bold">856</p>
                     </div>
                     <form action="" method="get">
-                        <select name="periodo" title="periodo" id="periodo-loja-2">
-                            <option value="mes">Este mês</option>
-                            <option value="semestre">Este semestre</option>
-                            <option value="ano">Este ano</option>
+                        <select name="periodo" title="periodo" id="periodo-loja-2"
+                        class="border-none text-sm text-[#949494] p-1">
+                            <option value="mes">Este Mês</option>
+                            <option value="semestre">Este Semestre</option>
+                            <option value="ano">Este Ano</option>
                         </select>
                     </form>
                 </div>
@@ -374,17 +379,45 @@
                         <p class="self-center mb-2 text-sm font-semibold">VENDEDORES DESTACADOS</p>
                         <div class="mb-5 self-center [&_*]:text-sm">
                             <label for="mes-i-1">DE</label>
-                            <select name="mes-inicial" id="mes-i-1">
-                                <option value="mes-1">JAN</option>
-                            </select>
-
-                            <label for="mes-f-1">ATÉ</label>
-                            <select name="mes-final" id="mes-f-1">
+                            <select name="mes-inicial" id="mes-i-1"
+                            class="bg-[#ECEEEF] p-0.5 text-[#949494] border-none shadow-inner 
+                            rounded-md">
+                                <option value="mes-1" selected>JAN</option>
+                                <option value="mes-2">FEV</option>
+                                <option value="mes-3">MAR</option>
+                                <option value="mes-4">ABR</option>
+                                <option value="mes-5">MAI</option>
+                                <option value="mes-6">JUN</option>
+                                <option value="mes-7">JUL</option>
+                                <option value="mes-8">AGO</option>
+                                <option value="mes-9">SET</option>
+                                <option value="mes-10">OUT</option>
+                                <option value="mes-11">NOV</option>
                                 <option value="mes-12">DEZ</option>
                             </select>
 
+                            <label for="mes-f-1">ATÉ</label>
+                            <select name="mes-final" id="mes-f-1"
+                            class="bg-[#ECEEEF] p-0.5 text-[#949494] border-none shadow-inner 
+                            rounded-md">
+                                <option value="mes-1">JAN</option>
+                                <option value="mes-2">FEV</option>
+                                <option value="mes-3">MAR</option>
+                                <option value="mes-4">ABR</option>
+                                <option value="mes-5">MAI</option>
+                                <option value="mes-6">JUN</option>
+                                <option value="mes-7">JUL</option>
+                                <option value="mes-8">AGO</option>
+                                <option value="mes-9">SET</option>
+                                <option value="mes-10">OUT</option>
+                                <option value="mes-11">NOV</option>
+                                <option value="mes-12" selected>DEZ</option>
+                            </select>
+
                             <label for="ano-v-1">ANO</label>
-                            <select name="ano-vendas" id="ano-v-1">
+                            <select name="ano-vendas" id="ano-v-1"
+                            class="bg-[#ECEEEF] p-0.5 text-[#949494] border-none shadow-inner 
+                            rounded-md">
                                 <option value="ano-2023">2023</option>
                             </select>
                         </div>
@@ -423,7 +456,7 @@
             <section class="my-3 max-w-full overflow-auto">
                 <p class="text-xs font-bold mb-2.5">ESTATÍSTICAS</p>
                 <div class="flex">
-                    <div class="mr-5 p-3 w-4/6 bg-white rounded-md shadow-md">
+                    <div class="mr-5 p-3 w-2/3 bg-white rounded-md shadow-md">
                         <p class="text-xs font-semibold">GRÁFICO DE FATURAMENTO</p>
                         <div class="grid grid-cols-2 divide-x-2 pr-3">
                             <!--Aqui vão ficar os gráficos-->
@@ -459,21 +492,49 @@
                         </div>
                     </div>
 
-                    <form class="flex flex-col p-3 bg-white rounded-md shadow-md">
+                    <form class="flex flex-col w-1/3 p-3 bg-white rounded-md shadow-md">
                         <p class="self-center mb-2 text-sm font-semibold">FATURAMENTO PERÍODO</p>
                         <div class="mb-5 self-center [&_*]:text-sm">
                             <label for="mes-i-2">DE</label>
-                            <select name="mes-inicial" id="mes-i-2">
-                                <option value="mes-1">JAN</option>
-                            </select>
-
-                            <label for="mes-f-2">ATÉ</label>
-                            <select name="mes-final" id="mes-f-2">
+                            <select name="mes-inicial" id="mes-i-2"
+                            class="bg-[#ECEEEF] p-0.5 text-[#949494] border-none shadow-inner 
+                            rounded-md">
+                                <option value="mes-1" selected>JAN</option>
+                                <option value="mes-2">FEV</option>
+                                <option value="mes-3">MAR</option>
+                                <option value="mes-4">ABR</option>
+                                <option value="mes-5">MAI</option>
+                                <option value="mes-6">JUN</option>
+                                <option value="mes-7">JUL</option>
+                                <option value="mes-8">AGO</option>
+                                <option value="mes-9">SET</option>
+                                <option value="mes-10">OUT</option>
+                                <option value="mes-11">NOV</option>
                                 <option value="mes-12">DEZ</option>
                             </select>
 
+                            <label for="mes-f-2">ATÉ</label>
+                            <select name="mes-final" id="mes-f-2"
+                            class="bg-[#ECEEEF] p-0.5 text-[#949494] border-none shadow-inner 
+                            rounded-md">
+                                <option value="mes-1">JAN</option>
+                                <option value="mes-2">FEV</option>
+                                <option value="mes-3">MAR</option>
+                                <option value="mes-4">ABR</option>
+                                <option value="mes-5">MAI</option>
+                                <option value="mes-6">JUN</option>
+                                <option value="mes-7">JUL</option>
+                                <option value="mes-8">AGO</option>
+                                <option value="mes-9">SET</option>
+                                <option value="mes-10">OUT</option>
+                                <option value="mes-11">NOV</option>
+                                <option value="mes-12" selected>DEZ</option>
+                            </select>
+
                             <label for="ano-v-2">ANO</label>
-                            <select name="ano-vendas" id="ano-v-2">
+                            <select name="ano-vendas" id="ano-v-2"
+                            class="bg-[#ECEEEF] p-0.5 text-[#949494] border-none shadow-inner 
+                            rounded-md">
                                 <option value="ano-2023">2023</option>
                             </select>
                         </div>

@@ -82,7 +82,7 @@
             <div class="bg-[#F5F5F5] p-3 border-[#00000020] border-b-2">
                 <p class="text-lg font-semibold">DETALHES DO PEDIDO</p>
             </div>
-            <div class="p-3 grid grid-cols-4 gap-x-5 gap-y-3 bg-white">
+            <div class="p-3 grid grid-cols-4 gap-x-5 gap-y-3 bg-white [&_input]:cursor-not-allowed">
                 <div class="flex flex-col border-b-2 border-gray-400">
                     <label for="pedido" class="font-semibold">Pedido:</label>
                     <input id="pedido" type="text" value="2059" 
@@ -122,8 +122,8 @@
                 <div class="flex flex-col border-b-2 border-gray-400">
                     <label for="status" class="font-semibold">Status:</label>
                     <input id="status" type="text" value="Cancelado" 
-                    class="appearance-none border-none focus:outline-none bg-transparent ml-1 
-                    p-3 bg-[#F44236] text-white w-1/4 h-1/2" readonly>
+                    class="bg-red-600 appearance-none border-none focus:outline-none bg-transparent ml-1 
+                    p-3 text-white w-5/12 h-1/2" readonly>
                 </div>
 
                 <div class="flex flex-col border-b-2 border-gray-400">
@@ -152,7 +152,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col px-3 pt-6 shadow-lg">
+        <section class="flex flex-col px-3 pt-6 shadow-lg [&_input]:cursor-not-allowed">
             <div class="bg-[#F5F5F5] p-3 border-[#00000020] border-b-2">
                 <p class="text-lg font-semibold">CONSUMIDOR</p>
             </div>

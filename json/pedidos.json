@@ -1,4 +1,13 @@
 {
+    "pagina":{
+        "numero": 1,
+        "proxima_pagina":2,
+        "pagina_anterior":null,
+        "totais":{
+            "valor":"R$ 2.185.936,15",
+            "quantidade": "40.425"
+        }  
+    },
     "pedidos":[
         {
             "id_interno": 508680,
@@ -362,7 +371,7 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":3
         },
         {
             "id_interno": 506161,
@@ -394,7 +403,7 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":3
         },
         {
             "id_interno": 506161,
@@ -426,7 +435,7 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":3
         },
         {
             "id_interno": 506161,
@@ -451,14 +460,14 @@
             "cadastro_status": {
                 "cadastro": "10/01/2024 às 15:04",
                 "status":{
-                    "titulo":"FINALIZADO",
-                    "cor":"#43B968"
+                    "titulo":"AGUARDANDO <br> RETIRADA",
+                    "cor":"#A567E2"
                 }
             },
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":0
         },
         {
             "id_interno": 506161,
@@ -490,7 +499,7 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":0
         },
         {
             "id_interno": 506161,
@@ -522,11 +531,11 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":0
         },
         {
             "id_interno": 506161,
-            "bg_row_cor":"#bae6fd",
+            "bg_row_cor":"#45A3D9",
             "n_pedido": 2038,
             "envio_pagamento":{
                 "envio":"RETIRADA <br> NA LOJA",
@@ -554,7 +563,7 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":4
         },
         {
             "id_interno": 506161,
@@ -586,7 +595,7 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":1
         },
         {
             "id_interno": 506161,
@@ -618,7 +627,7 @@
             "enviado":{
                 "titulo":"NÃO"
             },
-            "açoes":2
+            "açoes":0
         },
         {
             "id_interno": 506161,

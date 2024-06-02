@@ -1,5 +1,6 @@
 import gestor_pedidos from '../../../json/pedidos.json' with { type: 'json' };
 const pedidosDiv = document === null || document === void 0 ? void 0 : document.getElementById("pedidos");
+//Divide do botão de ação compartilhar
 const botao_laranja = `
     <button type="button" title="compartilhar">
         <div class="bg-[#F59345] h-full">
@@ -10,6 +11,7 @@ const botao_laranja = `
         </div>
     </button>
 `;
+//Divide do botão de ação ler
 const botao_azul = `
     <button type="button" title="ler">
         <div class="bg-[#3E70C9] h-full">
@@ -20,6 +22,7 @@ const botao_azul = `
         </div>
     </button>
 `;
+//Divide do botão de ação eliminar
 const botao_preto = `
     <button type="button" title="eliminar">
         <div class="bg-[#36394F] h-full">
@@ -30,6 +33,7 @@ const botao_preto = `
         </div>
     </button>
 `;
+//Divide do botão de ação editar
 const botao_roxo = `
     <button type="button" title="editar">
         <div class="bg-[#A567E2] h-full">
@@ -40,6 +44,7 @@ const botao_roxo = `
         </div>
     </button>
 `;
+//Divide do botão de ação entrega
 const botao_verde = `
     <button type="button" title="entrega">
         <div class="bg-[#20B9AE] h-full">
@@ -50,6 +55,7 @@ const botao_verde = `
         </div>
     </button>
 `;
+/**Define quais botões são adicionados a cada row*/
 const modeloAçoes = (laranja, azul, preto, roxo, verde) => {
     let conjunto_botoes = "";
     if (laranja)
@@ -64,6 +70,7 @@ const modeloAçoes = (laranja, azul, preto, roxo, verde) => {
         conjunto_botoes += botao_verde;
     return conjunto_botoes;
 };
+/**Define o tipo de modelo de ações possíveis com base no valor 'açoes' de cada row*/
 function modeloAçoesSwitch(tipo_modelo) {
     switch (tipo_modelo) {
         case 1:
@@ -83,6 +90,7 @@ function modeloAçoesSwitch(tipo_modelo) {
             return modeloAçoes(false, true, true, false, false);
     }
 }
+/**Define o tipo de texto relacionado a cada status de envio */
 function modeloEnviado(enviado, data, link) {
     if (enviado == "SIM") {
         return `
@@ -104,6 +112,27 @@ function modeloEnviado(enviado, data, link) {
         </span>
     `;
 }
+/**Modelo para o ultimo row que mostra o total da página*/
+function modeloTotal() {
+    const pagina = gestor_pedidos.pagina;
+    return `
+    <div class="grid grid-cols-12 *:py-1.5 *:text-center divide-x-2 divide-y-2">
+        <div>
+            <input type="checkbox" name="${pagina.numero}" id="${pagina.numero}" 
+            title="${pagina.numero}" class="border-2">
+        </div>
+        <span class="text-sm col-span-2">TOTAIS:</span>
+        <p class="text-[0.7rem] font-bold">${pagina.totais.valor} <br> 
+            ${pagina.totais.quantidade}</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+    </div>
+    `;
+}
+/**Modelo para cada row existente no json 'pedidos.json'*/
 function mostrarPedidos() {
     const pedidos = gestor_pedidos.pedidos;
     pedidosDiv.innerHTML = "";
@@ -112,7 +141,7 @@ function mostrarPedidos() {
         <div class="bg-[${pedidos[i].bg_row_cor}] grid grid-cols-12 *:py-1.5 *:text-center divide-x-2 divide-y-2">
             <div>
                 <input type="checkbox" name="${pedidos[i].n_pedido}" id="${pedidos[i].id_interno}" 
-                title="${pedidos[i].id_interno}" class="border-2">
+                title="${pedidos[i].id_interno}" class="border-2 cursor-pointer">
             </div>
             <span class="text-[0.8rem]">${pedidos[i].id_interno}</span>
             <p class="text-[0.7rem] font-bold">${pedidos[i].n_pedido}</p>
@@ -156,5 +185,6 @@ function mostrarPedidos() {
         `;
         pedidosDiv.innerHTML += elementoHTML;
     }
+    pedidosDiv.innerHTML += modeloTotal();
 }
 mostrarPedidos();

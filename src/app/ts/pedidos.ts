@@ -35,7 +35,19 @@ type Pedido = {
     açoes:number
 }
 
+type Pagina = {
+    numero:number,
+    proxima_pagina:number | null,
+    pagina_anterior:number | null,
+    totais:{
+        valor:string,
+        quantidade:string
+    }
+}
+
 const pedidosDiv = <HTMLDivElement>document?.getElementById("pedidos");
+
+//Divide do botão de ação compartilhar
 const botao_laranja = `
     <button type="button" title="compartilhar">
         <div class="bg-[#F59345] h-full">
@@ -47,6 +59,7 @@ const botao_laranja = `
     </button>
 `
 
+//Divide do botão de ação ler
 const botao_azul = `
     <button type="button" title="ler">
         <div class="bg-[#3E70C9] h-full">
@@ -58,6 +71,7 @@ const botao_azul = `
     </button>
 `
 
+//Divide do botão de ação eliminar
 const botao_preto = `
     <button type="button" title="eliminar">
         <div class="bg-[#36394F] h-full">
@@ -69,6 +83,7 @@ const botao_preto = `
     </button>
 `
 
+//Divide do botão de ação editar
 const botao_roxo = `
     <button type="button" title="editar">
         <div class="bg-[#A567E2] h-full">
@@ -80,6 +95,7 @@ const botao_roxo = `
     </button>
 `
 
+//Divide do botão de ação entrega
 const botao_verde = `
     <button type="button" title="entrega">
         <div class="bg-[#20B9AE] h-full">
@@ -91,6 +107,7 @@ const botao_verde = `
     </button>
 `
 
+/**Define quais botões são adicionados a cada row*/
 const modeloAçoes = (laranja:boolean, azul:boolean, preto:boolean, roxo:boolean, verde:boolean):string =>{
     let conjunto_botoes:string = "";
     if(laranja) conjunto_botoes += botao_laranja;
@@ -102,6 +119,7 @@ const modeloAçoes = (laranja:boolean, azul:boolean, preto:boolean, roxo:boolean
     return conjunto_botoes;
 }
 
+/**Define o tipo de modelo de ações possíveis com base no valor 'açoes' de cada row*/
 function modeloAçoesSwitch(tipo_modelo:number): string{
     switch(tipo_modelo){
         case 1: 
@@ -122,6 +140,7 @@ function modeloAçoesSwitch(tipo_modelo:number): string{
     }
 }
 
+/**Define o tipo de texto relacionado a cada status de envio */
 function modeloEnviado(enviado:string, data?:string, link?:string):string{
     if(enviado == "SIM"){
         return `
@@ -145,6 +164,29 @@ function modeloEnviado(enviado:string, data?:string, link?:string):string{
     `;
 }
 
+/**Modelo para o ultimo row que mostra o total da página*/
+function modeloTotal():string{
+    const pagina:Pagina = gestor_pedidos.pagina;
+
+    return `
+    <div class="grid grid-cols-12 *:py-1.5 *:text-center divide-x-2 divide-y-2">
+        <div>
+            <input type="checkbox" name="${pagina.numero}" id="${pagina.numero}" 
+            title="${pagina.numero}" class="border-2">
+        </div>
+        <span class="text-sm col-span-2">TOTAIS:</span>
+        <p class="text-[0.7rem] font-bold">${pagina.totais.valor} <br> 
+            ${pagina.totais.quantidade}</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+        <p class="text-xs">--</p>
+    </div>
+    `;
+}
+
+/**Modelo para cada row existente no json 'pedidos.json'*/
 function mostrarPedidos(){
     const pedidos:Pedido[] = gestor_pedidos.pedidos;
 
@@ -154,7 +196,7 @@ function mostrarPedidos(){
         <div class="bg-[${pedidos[i].bg_row_cor}] grid grid-cols-12 *:py-1.5 *:text-center divide-x-2 divide-y-2">
             <div>
                 <input type="checkbox" name="${pedidos[i].n_pedido}" id="${pedidos[i].id_interno}" 
-                title="${pedidos[i].id_interno}" class="border-2">
+                title="${pedidos[i].id_interno}" class="border-2 cursor-pointer">
             </div>
             <span class="text-[0.8rem]">${pedidos[i].id_interno}</span>
             <p class="text-[0.7rem] font-bold">${pedidos[i].n_pedido}</p>
@@ -199,6 +241,8 @@ function mostrarPedidos(){
 
         pedidosDiv.innerHTML += elementoHTML;
     }
+
+    pedidosDiv.innerHTML += modeloTotal();
 }
 
 mostrarPedidos()
